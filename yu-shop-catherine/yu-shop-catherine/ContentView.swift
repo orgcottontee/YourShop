@@ -23,6 +23,7 @@ struct ContentView: View {
       VStack {
         HStack {
           Text("Welcome,")
+            .foregroundColor(Color("TextColor"))
             .font(.largeTitle)
             .padding([.top, .leading, .trailing])
           Spacer()
@@ -30,7 +31,7 @@ struct ContentView: View {
             onboardingModal = true
           }) {
             Image(systemName: "hand.wave")
-              .foregroundColor(.black)
+              .foregroundColor(Color("TextColor"))
               .font(.largeTitle)
               .padding([.top, .leading, .trailing])
           }
@@ -38,14 +39,17 @@ struct ContentView: View {
             onboardingModalView()
           })
         }
+        
         HStack {
           Text("Theo")
+            .foregroundColor(Color("TextColor"))
             .font(.title2)
             .padding(.leading)
           Spacer()
         }
         Spacer()
       }
+      .padding()
       
     }
     

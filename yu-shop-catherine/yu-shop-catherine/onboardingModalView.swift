@@ -16,10 +16,21 @@ struct onboardingModalView: View {
       Color(.white).edgesIgnoringSafeArea(.all)
     
       VStack {
-        Text("Yu Shop")
-          .font(.largeTitle)
-          .padding()
+        HStack {
+      
+          Text("Yu Shop")
+            .foregroundColor(Color("TextColor"))
+            .font(.largeTitle)
+            .padding()
+          Spacer()
+          Image(systemName: "tshirt")
+            .foregroundColor(Color("TextColor"))
+            .font(.largeTitle)
+        }
+        .padding()
+    
         Text("At Yu Shop, you will discover timeless, classic quality clothing created by independent designers")
+          .foregroundColor(Color("TextColor"))
           .font(.caption)
           .multilineTextAlignment(.center)
           .padding()
@@ -30,7 +41,11 @@ struct onboardingModalView: View {
           Text("Select you favorite product(s) and add them to your shopping cart")
           Text("View the total amount due at checkout before finalzing payment")
           Text("Apply a discount code at the checkout page")
-          Text("Write a review and add a photo of the product(s) you purhcased")        }
+          Text("Write a review and add a photo of the product(s) you purhcased")
+          
+        }
+        .foregroundColor(Color("TextColor"))
+        .padding()
         .listStyle(.inset)
         
         
