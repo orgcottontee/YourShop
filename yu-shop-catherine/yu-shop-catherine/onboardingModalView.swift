@@ -23,16 +23,17 @@ struct onboardingModalView: View {
           .font(.caption)
           .multilineTextAlignment(.center)
           .padding()
-        Text("In this app, you'll...")
-          .font(.title2)
+    
         List {
           Text ("Discover products on sale in a list")
           Text("Discover products in a catalog fetched from an API and saved in the app")
-          Text("Selec tyour favorite products and add it to your shopping cart")
+          Text("Select you favorite product(s) and add them to your shopping cart")
           Text("View the total amount due at checkout before finalzing payment")
-          Text("Get to apply a discount code at the checkout page")
-          Text("Have the option to write a review and add a photo of the product(s) you purhcased")        }
+          Text("Apply a discount code at the checkout page")
+          Text("Write a review and add a photo of the product(s) you purhcased")        }
         .listStyle(.inset)
+        
+        
       }
     }
     

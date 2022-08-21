@@ -17,7 +17,7 @@ struct ContentView: View {
 
   var body: some View {
     ZStack {
-      Color(.white)
+      Color("BackgroundColor")
         .edgesIgnoringSafeArea(.all)
       
       VStack {
@@ -59,6 +59,11 @@ struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     ContentView()
     ContentView()
+      .previewInterfaceOrientation(.landscapeLeft)
+    ContentView()
       .preferredColorScheme(.dark)
+    ContentView()
+      .preferredColorScheme(.dark)
+      .previewInterfaceOrientation(.landscapeLeft)
   }
 }
