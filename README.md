@@ -1,11 +1,11 @@
-yu-shop-catherine
+Yu Shop
 
-This repo is a shopping app called Yu Shop. This app must have: 
+Yu Shop is an app where you will discover timeless, quality clothing created by independent designers. 
 
-- Products for sale displayed in a list
-- Product catalog fetched from an API and saved in the app
-- The feature to allow users to choose a product and add it to the shopping cart
-- The total amount due will be calculated at checkout
-- An option to apply a discount code on the checkout page
-- An option for users to write a review and add a photo of the product they purchased
+- Discover products on sale in a list
+- Discover products in a catalog fetched from an API and saved in the app
+- Select you favorite product(s) and add them to your shopping cart
+- View the total amount due at checkout before finalzing payment
+- Apply a discount code at the checkout page
+- Write a review and add a photo of the product(s) you purhcased
 
