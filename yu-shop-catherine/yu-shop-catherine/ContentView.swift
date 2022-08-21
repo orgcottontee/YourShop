@@ -29,7 +29,7 @@ struct ContentView: View {
           Button(action: {
             onboardingModal = true
           }) {
-            Image(systemName: "bag")
+            Image(systemName: "hand.wave")
               .foregroundColor(.black)
               .font(.largeTitle)
               .padding([.top, .leading, .trailing])
