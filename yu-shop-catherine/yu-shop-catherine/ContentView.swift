@@ -8,39 +8,44 @@
 import SwiftUI
 
 struct ContentView: View {
-  var body: some View {
-    
+  
+  @State private var onboardingModal = false
+  
+//  @State private var onboardingScreenModal: Bool = false
+  // @State is a state variable. Whenever a state variable changes, we want SwiftUI to recomupte the body. State variable and body of view are always in sync.
+  // private to contentview and no one can access it
 
-    
+  var body: some View {
     ZStack {
-      Color(.gray)
+      Color(.white)
         .edgesIgnoringSafeArea(.all)
       
       VStack {
-        HStack(spacing: 10) {
+        HStack {
           Text("Welcome,")
             .font(.largeTitle)
             .padding([.top, .leading, .trailing])
           Spacer()
-          Button(action: <#T##() -> Void#>, label: <#T##() -> _#>)
-          Image(systemName: "bag")
-            .font(.largeTitle)
-            .padding([.top, .leading, .trailing])
+          Button(action: {
+            onboardingModal = true
+          }) {
+            Image(systemName: "bag")
+              .foregroundColor(.black)
+              .font(.largeTitle)
+              .padding([.top, .leading, .trailing])
+          }
+          .sheet(isPresented: $onboardingModal, onDismiss: {}, content: {
+            onboardingModalView()
+          })
         }
         HStack {
           Text("Theo")
             .font(.title2)
             .padding(.leading)
           Spacer()
-            
-
         }
-        
         Spacer()
       }
-      
-      
-      
       
     }
     
@@ -53,5 +58,7 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     ContentView()
+    ContentView()
+      .preferredColorScheme(.dark)
   }
 }
