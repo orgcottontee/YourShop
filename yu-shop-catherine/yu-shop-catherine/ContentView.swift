@@ -26,15 +26,14 @@ struct ContentView: View {
             .padding([.top, .leading, .trailing])
           Spacer()
           Button(action: {
-            onboardingModal = true
+            self.onboardingModal = true
           }) {
             Image(systemName: "hand.wave")
               .foregroundColor(Color("TextColor"))
-              .font(.system(size: 34 , weight: .ultraLight))
+              .font(.system(size: Constants.SfSymbols.size, weight: .ultraLight))
               .padding([.top, .leading, .trailing])
-          }
-          .sheet(isPresented: $onboardingModal, onDismiss: {}, content: {
-            onboardingModalView()
+          }.sheet(isPresented: $onboardingModal, onDismiss: {}, content: {
+            onboardingModalView(onboardingModal: self.$onboardingModal)
           })
         }
         

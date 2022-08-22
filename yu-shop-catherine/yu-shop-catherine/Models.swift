@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import UIKit
+
+enum Constants {
+  enum SfSymbols {
+    public static let size = CGFloat(34.0)
+    
+  }
+}
