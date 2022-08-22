@@ -11,10 +11,10 @@ struct ContentView: View {
   
   @State private var onboardingModal = false
   
-//  @State private var onboardingScreenModal: Bool = false
+  //  @State private var onboardingScreenModal: Bool = false
   // @State is a state variable. Whenever a state variable changes, we want SwiftUI to recomupte the body. State variable and body of view are always in sync.
   // private to contentview and no one can access it
-
+  
   var body: some View {
     ZStack {
       Color("BackgroundColor")
@@ -22,9 +22,7 @@ struct ContentView: View {
       
       VStack {
         HStack {
-          Text("Welcome,")
-            .foregroundColor(Color("TextColor"))
-            .font(.largeTitle)
+          WelcomeText(text: "Welcome,")
             .padding([.top, .leading, .trailing])
           Spacer()
           Button(action: {
@@ -41,9 +39,7 @@ struct ContentView: View {
         }
         
         HStack {
-          Text("Theo")
-            .foregroundColor(Color("TextColor"))
-            .font(.title2)
+          userName(text: "Theo")
             .padding(.leading)
           Spacer()
         }
@@ -59,6 +55,7 @@ struct ContentView: View {
 
 
 
+
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     ContentView()
@@ -71,3 +68,4 @@ struct ContentView_Previews: PreviewProvider {
       .previewInterfaceOrientation(.landscapeLeft)
   }
 }
+
