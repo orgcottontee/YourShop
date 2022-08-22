@@ -32,7 +32,7 @@ struct ContentView: View {
           }) {
             Image(systemName: "hand.wave")
               .foregroundColor(Color("TextColor"))
-              .font(.largeTitle)
+              .font(.system(size: 34 , weight: .ultraLight))
               .padding([.top, .leading, .trailing])
           }
           .sheet(isPresented: $onboardingModal, onDismiss: {}, content: {
