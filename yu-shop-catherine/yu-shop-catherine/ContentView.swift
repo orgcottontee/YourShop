@@ -33,12 +33,12 @@ struct ContentView: View {
               .font(.system(size: Constants.SfSymbols.size, weight: .ultraLight))
               .padding([.top, .leading, .trailing])
           }.sheet(isPresented: $onboardingModal, onDismiss: {}, content: {
-            onboardingModalView(onboardingModal: self.$onboardingModal)
+            OnboardingModalView(onboardingModal: self.$onboardingModal)
           })
         }
         
         HStack {
-          userName(text: "Theo")
+          UserName(text: "Theo")
             .padding(.leading)
           Spacer()
         }
