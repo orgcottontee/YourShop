@@ -9,51 +9,47 @@ import SwiftUI
 
 struct ContentView: View {
   
-  @State private var onboardingModal = false
+  @State var showOnboardingModal = false
   
-  //  @State private var onboardingScreenModal: Bool = false
-  // @State is a state variable. Whenever a state variable changes, we want SwiftUI to recomupte the body. State variable and body of view are always in sync.
-  // private to contentview and no one can access it
+  // @State is a state variable: whenever a state variable changes, we want SwiftUI to recomupte the body. The State variable and body of view are always in sync.
+  // Private to Contentview and no one can access it
   
   var body: some View {
+    // Background Color
     ZStack {
-      Color("BackgroundColor")
-        .edgesIgnoringSafeArea(.all)
+      Color("BackgroundColor").edgesIgnoringSafeArea(.all)
       
+      // Header
       VStack {
-        HStack {
-          WelcomeText(text: "Welcome,")
-            .padding([.top, .leading, .trailing])
+        HStack(alignment: .top) {
+          VStack(alignment: .leading) {
+            WelcomeText(text: "Welcome,")
+              .font(.largeTitle)
+            UserName(text: "Theo")
+          }
+          .padding()
+          
           Spacer()
+          
+          // Button
           Button(action: {
-            self.onboardingModal = true
+            showOnboardingModal.toggle()
           }) {
             Image(systemName: "hand.wave")
               .foregroundColor(Color("TextColor"))
               .font(.system(size: Constants.SfSymbols.size, weight: .ultraLight))
-              .padding([.top, .leading, .trailing])
-          }.sheet(isPresented: $onboardingModal, onDismiss: {}, content: {
-            OnboardingModalView(onboardingModal: self.$onboardingModal)
-          })
-        }
-        
-        HStack {
-          UserName(text: "Theo")
-            .padding(.leading)
-          Spacer()
+          }
+          .padding()
+          .sheet(isPresented: $showOnboardingModal) {
+            OnboardingModalView()
+          }
         }
         Spacer()
       }
       .padding()
-      
     }
-    
   }
-  
 }
-
-
-
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
@@ -67,4 +63,5 @@ struct ContentView_Previews: PreviewProvider {
       .previewInterfaceOrientation(.landscapeLeft)
   }
 }
+
 

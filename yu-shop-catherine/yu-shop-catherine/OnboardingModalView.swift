@@ -9,23 +9,27 @@ import SwiftUI
 
 struct OnboardingModalView: View {
   
-  @Binding var onboardingModal : Bool
+  @Environment(\.presentationMode) var presentationMode
   
   var body: some View {
-    
+    // Background Color
     ZStack {
       Color("BackgroundColor").edgesIgnoringSafeArea(.all)
       
+      // Content
       VStack {
         HStack {
-          
+          // Header
           Text("Yu Shop")
             .foregroundColor(Color("TextColor"))
             .font(.largeTitle)
             .padding()
+          
           Spacer()
+          
+          // Close Modal Button
           Button(action: {
-            self.onboardingModal = false
+            presentationMode.wrappedValue.dismiss()
           }) {
             Image(systemName: "clear")
               .foregroundColor(Color("TextColor"))
@@ -34,12 +38,14 @@ struct OnboardingModalView: View {
         }
         .padding()
         
+        // Subheader
         Text("At Yu Shop, you will discover timeless, classic quality clothing created by independent designers")
           .foregroundColor(Color("TextColor"))
           .font(.caption)
           .multilineTextAlignment(.center)
           .padding()
         
+        // List of features
         List {
           Text ("Discover products on sale in a list")
           Text("Discover products in a catalog fetched from an API and saved in the app")
@@ -47,41 +53,17 @@ struct OnboardingModalView: View {
           Text("View the total amount due at checkout before finalzing payment")
           Text("Apply a discount code at the checkout page")
           Text("Write a review and add a photo of the product(s) you purhcased")
-          
         }
-        
         .listStyle(.inset)
         .padding()
-        
-        
       }
     }
-    
-    
-    
   }
 }
 
-
-
 struct onboardingModalView_Previews: PreviewProvider {
-  static private var onboardingModal = Binding.constant(true)
   static var previews: some View {
-    
-    OnboardingModalView(onboardingModal: onboardingModal)
-    OnboardingModalView(onboardingModal: onboardingModal)
-      .previewInterfaceOrientation(.landscapeLeft)
-    OnboardingModalView(onboardingModal: onboardingModal)
-      .preferredColorScheme(.dark)
-    OnboardingModalView(onboardingModal: onboardingModal)
-      .preferredColorScheme(.dark)
-      .previewInterfaceOrientation(.landscapeLeft)
-    
-    
-    
-    
-    
-    
+    OnboardingModalView()
   }
 }
 
