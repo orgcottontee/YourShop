@@ -7,32 +7,22 @@
 
 import SwiftUI
 
-
-
 struct WelcomeText: View {
-  
   var text: String
-  
   var body: some View {
-    
     Text(text.uppercased())
       .foregroundColor(Color("TextColor"))
       .font(.largeTitle)
-    
   }
 }
 
 struct UserName: View {
   var text: String
-  
   var body: some View {
     Text(text.uppercased())
       .foregroundColor(Color("TextColor"))
       .font(.title2)
-    
   }
-  
-  
 }
 
 struct TextViews_Previews: PreviewProvider {
@@ -41,6 +31,5 @@ struct TextViews_Previews: PreviewProvider {
       WelcomeText(text: "Welcome")
       UserName(text: "User")
     }
-    
   }
 }

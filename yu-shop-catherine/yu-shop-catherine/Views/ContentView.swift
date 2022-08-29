@@ -10,11 +10,8 @@ import SwiftUI
 struct ContentView: View {
   
   @State var showOnboardingModal = false
-  let product = Product(name: "Shoes", size: 40, color: "White", description: nil)
-  
   // @State is a state variable: whenever a state variable changes, we want SwiftUI to recomupte the body. The State variable and body of view are always in sync.
   // Private to Contentview and no one can access it
-  
   var body: some View {
     // Background Color
     ZStack {
@@ -27,10 +24,6 @@ struct ContentView: View {
             WelcomeText(text: "Welcome,")
               .font(.largeTitle)
             UserName(text: "Theo")
-            Text(product.name)
-            Text(String(product.size))
-            Text(product.color)
-            Text(product.description ?? "No Description")
           }
           .padding()
           
