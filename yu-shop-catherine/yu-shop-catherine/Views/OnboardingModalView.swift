@@ -20,7 +20,7 @@ struct OnboardingModalView: View {
       VStack {
         HStack {
           // Header
-          Text("Yu Shop")
+          Text(Constants.appInfo.appName)
             .foregroundColor(Color("TextColor"))
             .font(.largeTitle)
             .padding()
@@ -31,9 +31,9 @@ struct OnboardingModalView: View {
           Button(action: {
             presentationMode.wrappedValue.dismiss()
           }) {
-            Image(systemName: "clear")
+            Image(systemName: Constants.SfSymbols.onboardingModal)
               .foregroundColor(Color("TextColor"))
-              .font(.system(size: 34 , weight: .ultraLight))
+              .font(.system(size: Constants.SfSymbols.size , weight: .ultraLight))
           }
         }
         .padding()
