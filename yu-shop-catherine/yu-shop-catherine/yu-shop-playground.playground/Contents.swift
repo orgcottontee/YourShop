@@ -184,7 +184,7 @@ printDiscount(discountType: .summerSale)
 printDiscount(discountType: .christmasSale)
 printDiscount(discountType: .springSale)
 
-// Assignment 8: Computer Property
+// Assignment 8: Computed Property
 
 struct Item {
   let price: Double
