@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Used a Struct to represent an item the customer is purchasing. Used my enum to calculate the discounted amount based on the item. 
 struct Item {
   let price: Double
   let discountType: DiscountType
@@ -29,6 +30,7 @@ struct Item {
   }
 }
 
+// Created an enum to display different types of sales for discount percentages
 
 enum DiscountType {
   case summerSale
@@ -46,4 +48,6 @@ enum DiscountType {
     }
   }
 }
+
+
 
