@@ -136,6 +136,9 @@ var itemPrices = [300.0, 150.0, 100.0]
 let increasedPrices = itemPrices.map { (price) -> Double in
   price * 1.5
 }
+// Shorter way
+// itemPrices.map { $0 * 1.5 }
+
 print("Assignment 5:")
 print(increasedPrices)
 
