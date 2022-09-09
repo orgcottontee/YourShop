@@ -43,7 +43,9 @@ struct WelcomeView: View {
             OnboardingModalView()
           }
         }
+        
         Spacer()
+        
       }
       .padding()
     }

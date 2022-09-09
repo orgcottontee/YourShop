@@ -11,6 +11,7 @@ struct WelcomeText: View {
   var text: String
   var body: some View {
     Text(text.uppercased())
+      .kerning(4)
       .foregroundColor(Color("TextColor"))
       .font(.largeTitle)
   }
@@ -20,6 +21,7 @@ struct UserName: View {
   var text: String
   var body: some View {
     Text(text.uppercased())
+      .kerning(4)
       .foregroundColor(Color("TextColor"))
       .font(.title2)
   }
