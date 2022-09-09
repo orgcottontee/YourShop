@@ -11,7 +11,7 @@ struct WelcomeView: View {
   
   @State var showOnboardingModal = false
   @State var itemDiscounts: Item = Item(price: 200.0, discountType: .springSale)
-  @State var itemsForSale: [ItemsForSale] = []
+
   
   var body: some View {
     // Background Color
@@ -45,7 +45,7 @@ struct WelcomeView: View {
         }
         
         Spacer()
-        
+        ProductsView()
       }
       .padding()
     }
