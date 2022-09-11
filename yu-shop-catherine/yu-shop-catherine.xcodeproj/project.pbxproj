@@ -12,7 +12,6 @@
 		DE034B4328B074B7006289D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE034B4228B074B7006289D2 /* Assets.xcassets */; };
 		DE034B4628B074B7006289D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE034B4528B074B7006289D2 /* Preview Assets.xcassets */; };
 		DE38425328BBE93400CF4D7F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE38425228BBE93400CF4D7F /* Product.swift */; };
-		DE6AB20928CBFA21006CB94C /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6AB20828CBFA21006CB94C /* ProductsTableViewController.swift */; };
 		DE6DD8D328CD54F20004C2D9 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6DD8D228CD54F20004C2D9 /* ProductsViewController.swift */; };
 		DE713A5228B2728500F9E179 /* OnboardingModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE713A5128B2728500F9E179 /* OnboardingModalView.swift */; };
 		DECE3CA528C632120061E59D /* Discounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECE3CA428C632120061E59D /* Discounts.swift */; };
@@ -29,7 +28,6 @@
 		DE034B4528B074B7006289D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DE38425128BAFCBB00CF4D7F /* yu-shop-playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "yu-shop-playground.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DE38425228BBE93400CF4D7F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		DE6AB20828CBFA21006CB94C /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
 		DE6DD8D228CD54F20004C2D9 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		DE713A5128B2728500F9E179 /* OnboardingModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModalView.swift; sourceTree = "<group>"; };
 		DECE3CA428C632120061E59D /* Discounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discounts.swift; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 				DE713A5128B2728500F9E179 /* OnboardingModalView.swift */,
 				DEE59BF328B3315F0095CDFE /* TextViews.swift */,
 				DEE754EB28CAEF1D00055345 /* ProductsView.swift */,
-				DE6AB20828CBFA21006CB94C /* ProductsTableViewController.swift */,
 				DE6DD8D228CD54F20004C2D9 /* ProductsViewController.swift */,
 			);
 			path = Views;
@@ -184,7 +181,6 @@
 				DEE59BF428B3315F0095CDFE /* TextViews.swift in Sources */,
 				DE034B4128B074B4006289D2 /* WelcomeView.swift in Sources */,
 				DE6DD8D328CD54F20004C2D9 /* ProductsViewController.swift in Sources */,
-				DE6AB20928CBFA21006CB94C /* ProductsTableViewController.swift in Sources */,
 				DEE754EC28CAEF1D00055345 /* ProductsView.swift in Sources */,
 				DE034B3F28B074B4006289D2 /* yu_shop_catherineApp.swift in Sources */,
 				DEE59BF628B3AB930095CDFE /* Constants.swift in Sources */,
