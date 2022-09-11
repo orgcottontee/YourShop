@@ -32,11 +32,15 @@ import UIKit
 //    
 //  override func viewDidLoad() {
 //    super.viewDidLoad()
+//    self.tableView.dataSource = self
 //    self.view.addSubview(tableView)
+//    self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "productsTableViewCell")
+//     self.tableView.frame = view.bounds
 //  }
 //}
 //
 //extension ProductsViewController: UITableViewDataSource {
+
 //  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 //    self.products.count
 //  }

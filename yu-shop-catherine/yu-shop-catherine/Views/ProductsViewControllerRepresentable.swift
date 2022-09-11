@@ -54,7 +54,13 @@ class ProductsViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.tableView.dataSource = self
     self.view.addSubview(tableView)
+    self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "productsTableViewCell")
+    self.tableView.frame = view.bounds
+    
+
+    
   }
 }
 

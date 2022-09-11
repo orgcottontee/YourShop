@@ -46,6 +46,7 @@ struct WelcomeView: View {
         
         Spacer()
         ProductsView()
+        ProductsUITableView()
       }
       .padding()
     }
