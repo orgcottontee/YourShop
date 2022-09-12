@@ -30,9 +30,9 @@ struct ProductsUITableView: UIViewControllerRepresentable {
 }
 
 class ProductsViewController: UIViewController {
-
+  
   let tableView: UITableView = UITableView()
-
+  
   var products: [Product] = [
     Product(name: "Socks", size: 3, color: "Black", description: "Ribbed"),
     Product(name: "Tank top", size: 4, color: "White", description: "Flowy"),
@@ -51,15 +51,23 @@ class ProductsViewController: UIViewController {
     Product(name: "Button down", size: 1, color: "Indigo", description: "Oversize"),
     Product(name: "Sweater", size: 4, color: "Black", description: "Cozy and comfy"),
   ]
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.tableView.dataSource = self
-    self.view.addSubview(tableView)
-    self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "productsTableViewCell")
-    self.tableView.frame = view.bounds
     
-
+    self.tableView.dataSource = self
+    
+    self.view.addSubview(self.tableView)
+    self.tableView.translatesAutoresizingMaskIntoConstraints = false
+    self.tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+    self.tableView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+    self.tableView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+    self.tableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+    
+    self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "productsTableViewCell")
+    
+    
+    
     
   }
 }
@@ -68,7 +76,7 @@ extension ProductsViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     self.products.count
   }
-
+  
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "productsTableViewCell", for: indexPath)
     cell.textLabel?.text = self.products[indexPath.row].name
