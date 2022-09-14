@@ -14,7 +14,7 @@ struct OnboardingModalView: View {
   var body: some View {
     // Background Color
     ZStack {
-      Color("BackgroundColor").edgesIgnoringSafeArea(.all)
+      
       
       // Content
       VStack {

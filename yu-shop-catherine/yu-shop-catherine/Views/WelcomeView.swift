@@ -11,44 +11,32 @@ struct WelcomeView: View {
   
   @State var showOnboardingModal = false
   @State var itemDiscounts: Item = Item(price: 200.0, discountType: .springSale)
-
+  
   
   var body: some View {
   
-    // Background Color
     ZStack {
-      Color("BackgroundColor").edgesIgnoringSafeArea(.all)
+      Image("WelcomeViewBackground")
+        .resizable()
+        .scaledToFill()
+        .edgesIgnoringSafeArea(.all)
+        .opacity(0.3)
       
-      // Header
       VStack {
-        HStack(alignment: .top) {
-          VStack(alignment: .leading) {
-            WelcomeText(text: Constants.title.homeTitle)
-              .font(.largeTitle)
-            UserName(text: "Theo")
-          }
-          .padding()
-          
-          Spacer()
-          
-          // Button
-          Button(action: {
-            showOnboardingModal.toggle()
-          }) {
-            Image(systemName: Constants.SfSymbols.homeView)
-              .foregroundColor(Color("TextColor"))
-              .font(.system(size: Constants.SfSymbols.size, weight: .ultraLight))
-          }
-          .padding()
-          .sheet(isPresented: $showOnboardingModal) {
-            OnboardingModalView()
-          }
+        WelcomeText(text: Constants.title.homeTitle)
+        UserName(text: "Theo")
+        Button(action: {
+          showOnboardingModal.toggle()
+        }) {
+          Image(systemName: Constants.SfSymbols.homeView)
+            .foregroundColor(Color("TextColor"))
+            .font(.system(size: Constants.SfSymbols.size, weight: .ultraLight))
         }
-        
-        Spacer()
-        
+        .padding()
+        .sheet(isPresented: $showOnboardingModal) {
+          OnboardingModalView()
+        }
       }
-      .padding()
     }
   }
 }

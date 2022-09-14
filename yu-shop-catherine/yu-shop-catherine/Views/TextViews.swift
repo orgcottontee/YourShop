@@ -27,11 +27,21 @@ struct UserName: View {
   }
 }
 
+struct TabText: View {
+  var text: String
+  var body: some View {
+    Text(text.uppercased())
+      .foregroundColor(Color("TextColor"))
+      .font(.caption)
+  }
+}
+
 struct TextViews_Previews: PreviewProvider {
   static var previews: some View {
     VStack {
       WelcomeText(text: "Welcome")
       UserName(text: "User")
+      TabText(text: "Home")
     }
   }
 }

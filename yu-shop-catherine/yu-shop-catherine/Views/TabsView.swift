@@ -8,30 +8,31 @@
 import SwiftUI
 
 struct TabsView: View {
+    
     var body: some View {
       TabView {
         WelcomeView()
           .tabItem {
-            Image(systemName: "house")
-            Text("Home")
+            Image(systemName: Constants.SfSymbols.homeTab)
+            TabText(text: "Home")
           }
           .tag(0)
         ProductsView()
           .tabItem {
-            Image(systemName: "magnifyingglass")
-            Text("Browse")
+            Image(systemName: Constants.SfSymbols.browseTab)
+            TabText(text: "Browse")
           }
           .tag(1)
         ProfileView()
           .tabItem {
-            Image(systemName: "person")
-            Text("Profile")
+            Image(systemName: Constants.SfSymbols.profileTab)
+            TabText(text: "Profile")
           }
           .tag(2)
         CartView()
           .tabItem {
-            Image(systemName: "bag")
-            Text("Cart")
+            Image(systemName: Constants.SfSymbols.bagTab)
+            TabText(text: "Bag")
           }
           .tag(3)
       }
