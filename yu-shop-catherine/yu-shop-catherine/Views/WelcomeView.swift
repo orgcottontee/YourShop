@@ -14,6 +14,7 @@ struct WelcomeView: View {
 
   
   var body: some View {
+  
     // Background Color
     ZStack {
       Color("BackgroundColor").edgesIgnoringSafeArea(.all)
