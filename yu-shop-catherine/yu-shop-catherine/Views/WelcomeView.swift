@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct WelcomeView: View {
   
   @State var showOnboardingModal = false
   @State var itemDiscounts: Item = Item(price: 200.0, discountType: .springSale)
-  // @State is a state variable: whenever a state variable changes, we want SwiftUI to recomupte the body. The State variable and body of view are always in sync.
-  // Private to Contentview and no one can access it
+
+  
   var body: some View {
     // Background Color
     ZStack {
@@ -43,7 +43,10 @@ struct ContentView: View {
             OnboardingModalView()
           }
         }
+        
         Spacer()
+        ProductsView()
+        ProductsUITableView()
       }
       .padding()
     }
@@ -52,12 +55,12 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    ContentView()
-    ContentView()
+    WelcomeView()
+    WelcomeView()
       .previewInterfaceOrientation(.landscapeLeft)
-    ContentView()
+    WelcomeView()
       .preferredColorScheme(.dark)
-    ContentView()
+    WelcomeView()
       .preferredColorScheme(.dark)
       .previewInterfaceOrientation(.landscapeLeft)
   }
