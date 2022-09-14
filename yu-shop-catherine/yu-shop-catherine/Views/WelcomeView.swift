@@ -46,7 +46,7 @@ struct WelcomeView: View {
         }
         
         Spacer()
-        ProductsView()
+        
       }
       .padding()
     }
