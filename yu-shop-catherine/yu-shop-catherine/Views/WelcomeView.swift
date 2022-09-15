@@ -1,8 +1,8 @@
 //
-//  ContentView.swift
+//  WelcomeView.swift
 //  yu-shop-catherine
 //
-//  Created by adobada on 8/19/22.
+//  Created by adobada on 9/14/22.
 //
 
 import SwiftUI
@@ -14,7 +14,7 @@ struct WelcomeView: View {
   
   
   var body: some View {
-  
+    
     ZStack {
       Image("WelcomeViewBackground")
         .resizable()
@@ -41,17 +41,8 @@ struct WelcomeView: View {
   }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct WelcomeView_Previews: PreviewProvider {
   static var previews: some View {
     WelcomeView()
-    WelcomeView()
-      .previewInterfaceOrientation(.landscapeLeft)
-    WelcomeView()
-      .preferredColorScheme(.dark)
-    WelcomeView()
-      .preferredColorScheme(.dark)
-      .previewInterfaceOrientation(.landscapeLeft)
   }
 }
-
-
