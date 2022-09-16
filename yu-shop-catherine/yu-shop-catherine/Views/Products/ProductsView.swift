@@ -10,22 +10,12 @@ import SwiftUI
 struct ProductsView: View {
   
   var products: [Product] = [
-    Product(name: "Pants", size: 3, color: "Black", description: "100% Cotton"),
-    Product(name: "T-Shirt", size: 4, color: "White", description: "100% Jersey Cotton"),
-    Product(name: "Shorts", size: 1, color: "Indigo", description: "Denim. Made in Japan"),
-    Product(name: "Hoodie", size: 4, color: "Black", description: "100% French Terry Cotton"),
-    Product(name: "Pants", size: 3, color: "Black", description: "100% Cotton"),
-    Product(name: "T-Shirt", size: 4, color: "White", description: "100% Jersey Cotton"),
-    Product(name: "Shorts", size: 1, color: "Indigo", description: "Denim. Made in Japan"),
-    Product(name: "Hoodie", size: 4, color: "Black", description: "100% French Terry Cotton"),
-    Product(name: "Pants", size: 3, color: "Black", description: "100% Cotton"),
-    Product(name: "T-Shirt", size: 4, color: "White", description: "100% Jersey Cotton"),
-    Product(name: "Shorts", size: 1, color: "Indigo", description: "Denim. Made in Japan"),
-    Product(name: "Hoodie", size: 4, color: "Black", description: "100% French Terry Cotton"),
-    Product(name: "Pants", size: 3, color: "Black", description: "100% Cotton"),
-    Product(name: "T-Shirt", size: 4, color: "White", description: "100% Jersey Cotton"),
-    Product(name: "Shorts", size: 1, color: "Indigo", description: "Denim. Made in Japan"),
-    Product(name: "Hoodie", size: 4, color: "Black", description: "100% French Terry Cotton"),
+    Product(name: "Trouser", size: "S", color: "Black", description: "100% Cotton"),
+    Product(name: "T-Shirt", size: "XS", color: "White", description: "100% Jersey Cotton"),
+    Product(name: "Shorts", size: "M", color: "Indigo", description: "Denim. Made in Japan"),
+    Product(name: "Hoodie", size: "XL", color: "Black", description: "100% French Terry Cotton"),
+    Product(name: "Jacket", size: "XXS", color: "Black", description: "100% Cotton"),
+    Product(name: "Coat", size: "L", color: "White", description: "100% Jersey Cotton"),
   ]
   
   var body: some View {
