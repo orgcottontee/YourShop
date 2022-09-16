@@ -30,8 +30,6 @@ struct OnboardingModalView: View {
       .padding()
       
       onboardingTagline(text: "At Yu Shop, you will discover timeless, classic quality clothing created by independent designers")
-        .padding()
-        .multilineTextAlignment(.center)
       
       List {
         Text ("Discover products on sale in a list")
@@ -46,6 +44,7 @@ struct OnboardingModalView: View {
     .padding()
   }
 }
+
 
 struct onboardingModalView_Previews: PreviewProvider {
   static var previews: some View {

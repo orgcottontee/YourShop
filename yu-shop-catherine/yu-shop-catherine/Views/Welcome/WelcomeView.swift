@@ -22,6 +22,9 @@ struct WelcomeView: View {
         .opacity(0.3)
       
       VStack {
+        
+        Spacer()
+        
         WelcomeText(text: Constants.title.homeTitle)
         UserName(text: "Theo")
         Button(action: {
@@ -35,10 +38,13 @@ struct WelcomeView: View {
         .sheet(isPresented: $showOnboardingModal) {
           OnboardingModalView()
         }
+        
+        Spacer()
+        
         Button {
           showHomeView.toggle()
         } label: {
-          Text("Start Browsing")
+          StartBrowsingText(text: "Start Browsing")
         }
         .fullScreenCover(isPresented: $showHomeView) {
           HomeView()
@@ -48,8 +54,8 @@ struct WelcomeView: View {
   }
 }
 
-  struct WelcomeView_Previews: PreviewProvider {
-    static var previews: some View {
-      WelcomeView()
-    }
+struct WelcomeView_Previews: PreviewProvider {
+  static var previews: some View {
+    WelcomeView()
   }
+}
