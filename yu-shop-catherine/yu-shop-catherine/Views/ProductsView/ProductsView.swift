@@ -32,6 +32,7 @@ struct ProductsView: View {
     NavigationView {
       List {
         ForEach(products) { product in
+        //  NavigationLink(destination: ProductDetailsView())
           HStack(alignment: .firstTextBaseline) {
             Text(product.name)
               .font(.largeTitle)
@@ -47,6 +48,7 @@ struct ProductsView: View {
           }
         }
       }
+      .navigationTitle("Products")
     }
   }
   struct ProductsView_Previews: PreviewProvider {

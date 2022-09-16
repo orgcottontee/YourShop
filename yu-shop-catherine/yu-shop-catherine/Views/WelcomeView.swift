@@ -10,8 +10,7 @@ import SwiftUI
 struct WelcomeView: View {
   
   @State var showOnboardingModal = false
-  @State var itemDiscounts: Item = Item(price: 200.0, discountType: .springSale)
-  
+  @State var showHomeView = false
   
   var body: some View {
     
@@ -36,13 +35,21 @@ struct WelcomeView: View {
         .sheet(isPresented: $showOnboardingModal) {
           OnboardingModalView()
         }
+        Button {
+          showHomeView.toggle()
+        } label: {
+          Text("Start Browsing")
+        }
+        .fullScreenCover(isPresented: $showHomeView) {
+          HomeView()
+        }
       }
     }
   }
 }
 
-struct WelcomeView_Previews: PreviewProvider {
-  static var previews: some View {
-    WelcomeView()
+  struct WelcomeView_Previews: PreviewProvider {
+    static var previews: some View {
+      WelcomeView()
+    }
   }
-}

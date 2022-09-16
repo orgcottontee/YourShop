@@ -9,7 +9,12 @@ import SwiftUI
 
 struct CartView: View {
     var body: some View {
-        Text("Customers can checkout on this page")
+      NavigationView {
+        VStack {
+          Text("Customers can checkout on this page")
+        }
+        .navigationTitle("Your Shopping bag")
+      }
     }
 }
 

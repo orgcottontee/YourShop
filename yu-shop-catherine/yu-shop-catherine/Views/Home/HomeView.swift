@@ -12,7 +12,7 @@ struct HomeView: View {
   var body: some View {
     
     TabView {
-      WelcomeView()
+      ProductsView()
         .tabItem {
           Image(systemName: Constants.SfSymbols.homeTab)
           TabText(text: "Home")

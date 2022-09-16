@@ -16,7 +16,7 @@ struct OnboardingModalView: View {
     VStack {
       HStack {
         onboardingTitle(text: Constants.appInfo.appName)
-      
+        
         Spacer()
         
         Button(action: {
@@ -27,9 +27,12 @@ struct OnboardingModalView: View {
             .font(.system(size: Constants.SfSymbols.size , weight: .ultraLight))
         }
       }
+      .padding()
       
       onboardingTagline(text: "At Yu Shop, you will discover timeless, classic quality clothing created by independent designers")
-
+        .padding()
+        .multilineTextAlignment(.center)
+      
       List {
         Text ("Discover products on sale in a list")
         Text("Discover products in a catalog fetched from an API and saved in the app")
@@ -39,8 +42,8 @@ struct OnboardingModalView: View {
         Text("Write a review and add a photo of the product(s) you purhcased")
       }
       .listStyle(.inset)
-      .padding()
     }
+    .padding()
   }
 }
 
