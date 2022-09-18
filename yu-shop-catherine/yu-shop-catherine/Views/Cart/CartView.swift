@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CartView: View {
+  
     var body: some View {
       NavigationView {
         VStack {
@@ -21,5 +22,6 @@ struct CartView: View {
 struct Cart_Previews: PreviewProvider {
     static var previews: some View {
         CartView()
+        .environmentObject(Bag())
     }
 }

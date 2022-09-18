@@ -11,7 +11,7 @@ struct TabBar: View {
   
   var body: some View {
     TabView {
-      CategoryView(product: productList[1])
+      CategoryView()
         .tabItem {
           Label("Home", systemImage: "house")
         }

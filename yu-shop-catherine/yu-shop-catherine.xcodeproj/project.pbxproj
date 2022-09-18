@@ -14,6 +14,7 @@
 		DE33BB6828D6E0670032B150 /* OnboardingModalTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE33BB6728D6E0670032B150 /* OnboardingModalTextView.swift */; };
 		DE33BB6A28D6EA190032B150 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE33BB6928D6EA190032B150 /* CategoryView.swift */; };
 		DE33BB6C28D6FEF70032B150 /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE33BB6B28D6FEF70032B150 /* Bag.swift */; };
+		DE33BB6F28D7063D0032B150 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE33BB6E28D7063D0032B150 /* CategoryCard.swift */; };
 		DE38425328BBE93400CF4D7F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE38425228BBE93400CF4D7F /* Product.swift */; };
 		DE488DB128D3FE9600228835 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE488DB028D3FE9600228835 /* Category.swift */; };
 		DE488DB328D3FF4C00228835 /* WelcomeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE488DB228D3FF4C00228835 /* WelcomeTextView.swift */; };
@@ -37,6 +38,7 @@
 		DE33BB6728D6E0670032B150 /* OnboardingModalTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModalTextView.swift; sourceTree = "<group>"; };
 		DE33BB6928D6EA190032B150 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		DE33BB6B28D6FEF70032B150 /* Bag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
+		DE33BB6E28D7063D0032B150 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
 		DE38425128BAFCBB00CF4D7F /* yu-shop-playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "yu-shop-playground.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DE38425228BBE93400CF4D7F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		DE488DB028D3FE9600228835 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -109,6 +111,15 @@
 			path = OnboardingModal;
 			sourceTree = "<group>";
 		};
+		DE33BB6D28D7013E0032B150 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				DE33BB6928D6EA190032B150 /* CategoryView.swift */,
+				DE33BB6E28D7063D0032B150 /* CategoryCard.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
 		DE488DAF28D3FD1000228835 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,10 +173,10 @@
 				DE034B4028B074B4006289D2 /* HomeView.swift */,
 				DE33BB6628D6E0440032B150 /* OnboardingModal */,
 				DE488DAF28D3FD1000228835 /* Welcome */,
+				DE33BB6D28D7013E0032B150 /* Category */,
 				DE7AB20728D2AD71002C4FC7 /* Products */,
 				DE7AB20828D2AD7A002C4FC7 /* Profile */,
 				DE7AB20628D2AD6A002C4FC7 /* Cart */,
-				DE33BB6928D6EA190032B150 /* CategoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -243,6 +254,7 @@
 				DE713A5228B2728500F9E179 /* OnboardingModalView.swift in Sources */,
 				DE5B5A3A28D6CDF600F87EE6 /* ProductDetailView.swift in Sources */,
 				DE7AB1FE28D263CE002C4FC7 /* CartView.swift in Sources */,
+				DE33BB6F28D7063D0032B150 /* CategoryCard.swift in Sources */,
 				DECE3CA528C632120061E59D /* Discounts.swift in Sources */,
 				DE034B4128B074B4006289D2 /* HomeView.swift in Sources */,
 				DE7AB20228D2666C002C4FC7 /* ProfileView.swift in Sources */,

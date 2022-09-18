@@ -7,62 +7,61 @@
 
 import SwiftUI
 
-@StateObject var bag = Bag()
 struct ProductDetailView: View {
   
   var productDetail: Product
   
   var body: some View {
-    
-    GeometryReader { proxy in
-      
-      HStack {
-        VStack {
-          Image(productDetail.image)
-            .resizable()
-            .scaledToFit()
-            .cornerRadius(20)
-            .frame(width: proxy.size.width * 0.45)
-            .padding()
-        }
-        
-        VStack(alignment: .center) {
-          Text(productDetail.name)
-            .font(.largeTitle)
-            .foregroundColor( .init(white: 0.4) )
-            .padding(.horizontal, 10)
-            .background( Color(white: 0.9) )
-            .cornerRadius(20)
-            .padding(.bottom)
-          
-          Text(productDetail.description)
-            .layoutPriority(1)
-            .multilineTextAlignment(.center)
-            .padding(.bottom)
-          
-          
-          Text("Size: \(productDetail.size)")
-            .font(.title2)
-            .multilineTextAlignment(.center)
-          
-          Text("$\(productDetail.price)")
-            .font(.title2)
-            .multilineTextAlignment(.center)
-          
-          Button {
-            print("You've add \(productDetail.name) to your bag!")
-          } label: {
-            Image(systemName: "plus")
-              .padding(10)
-              .foregroundColor(.white)
-              .background(.black)
-              .cornerRadius(50)
+    NavigationView {
+      GeometryReader { proxy in
+        HStack {
+          VStack {
+            Image(productDetail.image)
+              .resizable()
+              .scaledToFit()
+              .cornerRadius(20)
+              .frame(width: proxy.size.width * 0.45)
               .padding()
           }
           
+          VStack(alignment: .center) {
+            Text(productDetail.name)
+              .font(.largeTitle)
+              .foregroundColor( .init(white: 0.4) )
+              .padding(.horizontal, 10)
+              .background( Color(white: 0.9) )
+              .cornerRadius(20)
+              .padding(.bottom)
+            
+            Text(productDetail.description)
+              .layoutPriority(1)
+              .multilineTextAlignment(.center)
+              .padding(.bottom)
+            
+            
+            Text("Size: \(productDetail.size)")
+              .font(.title2)
+              .multilineTextAlignment(.center)
+            
+            Text("$\(productDetail.price)")
+              .font(.title2)
+              .multilineTextAlignment(.center)
+            
+            Button {
+              print("You've add \(productDetail.name) to your bag!")
+            } label: {
+              Image(systemName: "plus")
+                .padding(10)
+                .foregroundColor(.white)
+                .background(.black)
+                .cornerRadius(50)
+                .padding()
+            }
+            
+          }
+          .padding()
         }
-        .padding()
-        .lineSpacing(-.infinity)
+        .navigationTitle("Disocver more...")
       }
     }
   }
