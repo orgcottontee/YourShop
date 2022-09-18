@@ -13,10 +13,6 @@ enum Constants {
     public static let size = CGFloat(34.0)
     public static let homeView = "hand.wave"
     public static let onboardingModal = "clear"
-    public static let homeTab = "house"
-    public static let browseTab = "magnifyingglass"
-    public static let profileTab = "tshirt"
-    public static let bagTab = "bag"
   }
   
   enum appInfo {

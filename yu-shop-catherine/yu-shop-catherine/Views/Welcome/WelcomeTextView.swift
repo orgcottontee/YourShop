@@ -33,60 +33,12 @@ struct UserName: View {
   }
 }
 
-struct OnboardingTitle: View {
-  var text: String
-  var body: some View {
-    Text(text.uppercased())
-      .kerning(4)
-      .foregroundColor(Color("TextColor"))
-      .font(.largeTitle)
-  }
-}
-
-struct OnboardingTagline: View {
-  var text: String
-  var body: some View {
-    Text(text.uppercased())
-      .kerning(4)
-      .foregroundColor(Color("TextColor"))
-      .font(.caption)
-      .padding()
-      .multilineTextAlignment(.center)
-  }
-}
-
-struct OnboardingFeatures: View {
-  var text: String
-  var body: some View {
-    Text(text.uppercased())
-      .kerning(4)
-      .foregroundColor(Color("TextColor"))
-      .font(.callout)
-      .padding()
-  }
-}
-
-struct StartBrowsingText: View {
-  var text: String
-  var body: some View {
-    Text(text.uppercased())
-      .kerning(4)
-      .foregroundColor(Color("TextColor"))
-      .font(.subheadline)
-      .padding(.bottom)
-  }
-}
-
-
 struct WelcomeTextView_Previews: PreviewProvider {
     static var previews: some View {
       VStack {
+        WelcomeTextView()
         WelcomeText(text: "Welcome")
         UserName(text: "User")
-        OnboardingTitle(text: "Yu Shop")
-        OnboardingTagline(text: "At Yu Shop, you will discover timeless, classic quality clothing created by independent designers")
-        OnboardingTagline(text: "In this app you will be able to buy your favorite clothes")
-        StartBrowsingText(text: "Start Browsing")
       }
     }
 }

@@ -38,12 +38,12 @@ struct ProductDetailView: View {
         Text("Size: \(productDetail.size)")
           .font(.title2)
           .multilineTextAlignment(.center)
-          .padding()
+          //.padding()
         
         Text("$\(productDetail.price)")
           .font(.title2)
           .multilineTextAlignment(.center)
-          .padding()
+          //.padding()
         
       }
       .padding()
@@ -53,6 +53,6 @@ struct ProductDetailView: View {
 
 struct ProductDetailView_Previews: PreviewProvider {
   static var previews: some View {
-    ProductDetailView(productDetail: productList[0])
+    ProductDetailView(productDetail: productList[4])
   }
 }

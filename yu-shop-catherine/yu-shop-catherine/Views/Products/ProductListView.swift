@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct ProductList: View {
+struct ProductListView: View {
   
-  var product: Product
+//var product: Product
   
   var body: some View {
     
@@ -48,19 +48,20 @@ struct ProductList: View {
     NavigationView {
       List {
         ForEach(productList) { product in
-//          NavigationLink(destination: ProductDetailView(, label: product: product))
-          HStack(alignment: .firstTextBaseline) {
-            Text(product.name)
-              .font(.largeTitle)
-              .bold()
-              .padding()
-            
-            Spacer()
-            
-            Text("Size: \(product.size)")
-              .font(.headline)
-              .bold()
-              .padding()
+          NavigationLink(destination: ProductDetailView(productDetail: product)) {
+            HStack(alignment: .firstTextBaseline) {
+              Text(product.name)
+                .font(.largeTitle)
+                .bold()
+                .padding()
+              
+              Spacer()
+              
+              Text("Size: \(product.size)")
+                .font(.headline)
+                .bold()
+                .padding()
+            }
           }
         }
       }
@@ -71,6 +72,6 @@ struct ProductList: View {
 
 struct ProductsView_Previews: PreviewProvider {
   static var previews: some View {
-    ProductList(product: productList[0])
+    ProductListView()
   }
 }

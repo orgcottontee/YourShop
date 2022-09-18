@@ -45,7 +45,6 @@ struct WelcomeView: View {
           showHomeView.toggle()
         } label: {
           StartBrowsingText(text: "Start Browsing")
-           
         }
         
         .fullScreenCover(isPresented: $showHomeView) {
