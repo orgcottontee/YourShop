@@ -11,7 +11,7 @@ import SwiftUI
 struct yu_shop_catherineApp: App {
   var body: some Scene {
     WindowGroup {
-      TabBar()
+      HomeTabView()
     }
   }
 }

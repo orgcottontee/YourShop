@@ -9,8 +9,6 @@ import SwiftUI
 
 struct ProductListView: View {
   
-//var product: Product
-  
   var body: some View {
     
     NavigationView {
