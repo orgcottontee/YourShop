@@ -8,8 +8,8 @@
 import Foundation
 
 class Bag: ObservableObject {
-  @Published private ( set ) var products: [Product] = []
-  @Published private ( set ) var total: Int = 0
+  @Published private(set) var products: [Product] = []
+  @Published private(set) var total: Int = 0
   
   func addToBag(product: Product) {
     products.append(product)

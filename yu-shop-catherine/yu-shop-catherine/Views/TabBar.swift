@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct TabBar: View {
-  
+  @EnvironmentObject var bag: Bag
+
   var body: some View {
     TabView {
       CategoryView()
@@ -30,6 +31,7 @@ struct TabBar: View {
         .tag(2)
       
       CartView()
+        .badge(bag.products.count)
         .tabItem {
           Label("Bag", systemImage: "bag")
         }

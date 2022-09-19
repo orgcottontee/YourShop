@@ -9,19 +9,23 @@ import SwiftUI
 
 struct CartView: View {
   
-    var body: some View {
-      NavigationView {
-        VStack {
-          Text("Customers can checkout on this page")
+  @EnvironmentObject var bag: Bag
+  
+  var body: some View {
+    NavigationView {
+      VStack {
+        ForEach(bag.products) { product in
+          Text(product.name)
         }
-        .navigationTitle("Your Shopping bag")
       }
+      .navigationTitle("Your Shopping bag")
     }
+  }
 }
 
 struct Cart_Previews: PreviewProvider {
-    static var previews: some View {
-        CartView()
-        .environmentObject(Bag())
-    }
+  static var previews: some View {
+    CartView()
+      .environmentObject(Bag())
+  }
 }
