@@ -16,7 +16,7 @@ struct CategoryCard: View {
       ZStack(alignment: .bottom) {
         Image(product.image)
           .resizable()
-          .cornerRadius(20)
+          .cornerRadius(4)
           .frame(width: 180)
           .scaledToFit()
           
@@ -29,7 +29,7 @@ struct CategoryCard: View {
         .padding(10)
         .frame(width: 180, alignment: .leading)
         .background(.ultraThinMaterial)
-        .cornerRadius(20)
+        .cornerRadius(4)
       }
       .frame(width: 180, height: 250)
       .shadow(radius: 3)

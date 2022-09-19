@@ -33,12 +33,24 @@ struct UserName: View {
   }
 }
 
+struct StartBrowsingText: View {
+  var text: String
+  var body: some View {
+    Text(text.uppercased())
+      .kerning(4)
+      .foregroundColor(Color("TextColor"))
+      .font(.subheadline)
+      
+  }
+}
+
 struct WelcomeTextView_Previews: PreviewProvider {
     static var previews: some View {
       VStack {
         WelcomeTextView()
         WelcomeText(text: "Welcome")
         UserName(text: "User")
+        StartBrowsingText(text: "Start Browsing")
       }
     }
 }

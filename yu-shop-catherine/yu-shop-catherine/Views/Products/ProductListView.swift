@@ -17,9 +17,9 @@ struct ProductListView: View {
       List {
         ForEach(productList) { product in
           NavigationLink(destination: ProductDetailView(product: product)) {
-            HStack(alignment: .firstTextBaseline) {
+            HStack(alignment: .center) {
               Text(product.name)
-                .font(.largeTitle)
+                .font(.title)
                 .bold()
                 .padding()
               

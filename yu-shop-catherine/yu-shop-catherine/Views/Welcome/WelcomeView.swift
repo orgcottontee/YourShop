@@ -46,10 +46,10 @@ struct WelcomeView: View {
         } label: {
           StartBrowsingText(text: "Start Browsing")
         }
-        
         .fullScreenCover(isPresented: $showHomeView) {
           HomeTabView()
         }
+        Spacer()
       }
     }
   }
