@@ -8,5 +8,12 @@
 import Foundation
 
 struct Category {
+  struct SubCategory {
+    let categoryName: String
+    let name: String
+  }
+  
   let name: String
+  let subCategories: [SubCategory]
+  
 }
