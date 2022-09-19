@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct TabBar: View {
+  
   @EnvironmentObject var bag: Bag
-
+  
   var body: some View {
     TabView {
       CategoryView()
         .tabItem {
-          Label("Home", systemImage: "house")
+          Label("Categories", systemImage: "rectangle.3.group")
         }
         .tag(0)
       
@@ -23,6 +24,11 @@ struct TabBar: View {
           Label("Browse", systemImage: "magnifyingglass")
         }
         .tag(1)
+      
+      WelcomeView()
+        .tabItem {
+          Label("Home", systemImage: "house")
+        }
       
       ProfileView()
         .tabItem {
