@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Category {
+struct Category: Identifiable {
+  let id = UUID()
   struct SubCategory {
     let categoryName: String
     let name: String
@@ -15,5 +16,34 @@ struct Category {
   
   let name: String
   let subCategories: [SubCategory]
-  
 }
+
+extension Category {
+  static let categoryList = [
+    (name: "Bottoms", SubCategory: [
+      "Pants",
+      "Trousers",
+      "Skirt",
+      "Shorts",
+    ]),
+    (name: "Tops", SubCategory: [
+      "Tshirt",
+      "Puffer",
+      "Hoodie",
+      "Jacket"
+    ]),
+    (name: "Accessories", SubCategory: [
+      "Necklace",
+      "Earrings",
+      "Rings",
+      "Socks"
+    ]),
+    (name: "Footwear", SubCategory: [
+      "Sneakers",
+      "Mules",
+      "Slides",
+      "Boots"
+    ]),
+  ]
+}
+
