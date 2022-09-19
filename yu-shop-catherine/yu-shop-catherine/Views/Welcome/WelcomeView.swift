@@ -48,7 +48,7 @@ struct WelcomeView: View {
         }
         
         .fullScreenCover(isPresented: $showHomeView) {
-          HomeView()
+          HomeTabView()
         }
       }
     }

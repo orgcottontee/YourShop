@@ -15,15 +15,26 @@ struct ProductDetailView: View {
   var body: some View {
     NavigationView {
       HStack {
-        GeometryReader { proxy in
+        //GeometryReader { proxy in
           HStack {
             VStack {
               Image(product.image)
                 .resizable()
                 .scaledToFit()
                 .cornerRadius(20)
-                .frame(width: proxy.size.width * 0.45)
+                //.frame(width: proxy.size.width * 0.45)
                 .padding()
+              
+              Button {
+                print("You've added \(product.name) to your bag!")
+                bag.addToBag(product: product)
+              } label: {
+                Image(systemName: "plus")
+                  .font(.headline)
+                  .buttonBorderShape(.capsule)
+                  .foregroundColor(.white)
+                  .background(.black)
+              }
             }
             
             VStack(alignment: .center) {
@@ -48,19 +59,6 @@ struct ProductDetailView: View {
               Text("$\(product.price)")
                 .font(.title2)
                 .multilineTextAlignment(.center)
-              
-              Button {
-                print("You've added \(product.name) to your bag!")
-                bag.addToBag(product: product)
-              } label: {
-                Image(systemName: "plus")
-                  .padding(10)
-                  .foregroundColor(.white)
-                  .background(.black)
-                  .cornerRadius(50)
-                  .padding()
-              }
-              
             }
             .padding()
           }
@@ -69,7 +67,7 @@ struct ProductDetailView: View {
       }
     }
   }
-}
+//}
 
 struct ProductDetailView_Previews: PreviewProvider {
   static var previews: some View {

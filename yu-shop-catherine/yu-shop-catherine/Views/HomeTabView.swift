@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct HomeTabView: View {
   
   var body: some View {
     TabBar().environmentObject(Bag())
@@ -16,6 +16,6 @@ struct HomeView: View {
 
 struct TabsView_Previews: PreviewProvider {
   static var previews: some View {
-    HomeView()
+    HomeTabView()
   }
 }
