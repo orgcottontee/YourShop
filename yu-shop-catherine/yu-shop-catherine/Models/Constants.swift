@@ -20,8 +20,10 @@ enum Constants {
   }
   
   enum title {
-    public static let homeTitle = "Welcome, "
+    public static let homeTitle = "Welcome"
   }
+  
+  
   
   
   
