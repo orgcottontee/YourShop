@@ -10,6 +10,7 @@ import SwiftUI
 struct CategoryView: View {
   
   var columns = [GridItem(.adaptive(minimum: 160), spacing: 30)]
+  var categoryList: [Category]
   
   var body: some View {
     
@@ -29,6 +30,6 @@ struct CategoryView: View {
 
 struct CategoryView_Previews: PreviewProvider {
   static var previews: some View {
-    CategoryView()
+    CategoryView(categoryList: Category.sampleCategory)
   }
 }

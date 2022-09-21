@@ -13,7 +13,7 @@ struct TabBar: View {
   
   var body: some View {
     TabView {
-      CategoryView()
+      CategoryView(categoryList: Category.sampleCategory)
         .tabItem {
           Label("Categories", systemImage: "rectangle.3.group")
         }

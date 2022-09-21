@@ -19,28 +19,41 @@ struct Category: Identifiable {
   let subCategories: [SubCategory]
 }
 
-let bottomsCategory = Category(name: "Bottoms", subCategories: [
-  Category.SubCategory(categoryName: "Bottoms", name: "Pants"),
-  Category.SubCategory(categoryName: "Bottoms", name: "Jeans"),
-  Category.SubCategory(categoryName: "Bottoms", name: "Shorts"),
-])
+extension Category {
+  static var sampleCategory: [Category] = {
+    
+    var sampleCategoryData: [Category] = []
+    
+    let bottomsCategory = Category(name: "Bottoms", subCategories: [
+      Category.SubCategory(categoryName: "Bottoms", name: "Pants"),
+      Category.SubCategory(categoryName: "Bottoms", name: "Jeans"),
+      Category.SubCategory(categoryName: "Bottoms", name: "Shorts"),
+    ])
 
-let topsCategory = Category(name: "Tops", subCategories: [
-  Category.SubCategory(categoryName: "Tops", name: "T-shirt"),
-  Category.SubCategory(categoryName: "Tops", name: "Sweater"),
-  Category.SubCategory(categoryName: "Tops", name: "Outerwear"),
-])
+    let topsCategory = Category(name: "Tops", subCategories: [
+      Category.SubCategory(categoryName: "Tops", name: "T-shirt"),
+      Category.SubCategory(categoryName: "Tops", name: "Sweater"),
+      Category.SubCategory(categoryName: "Tops", name: "Outerwear"),
+    ])
 
-let accessoriesCategory = Category(name: "Accessories", subCategories: [
-  Category.SubCategory(categoryName: "Accessories", name: "Socks"),
-  Category.SubCategory(categoryName: "Accessories", name: "Jewelry"),
-  Category.SubCategory(categoryName: "Accessories", name: "Hats"),
-])
+    let accessoriesCategory = Category(name: "Accessories", subCategories: [
+      Category.SubCategory(categoryName: "Accessories", name: "Socks"),
+      Category.SubCategory(categoryName: "Accessories", name: "Jewelry"),
+      Category.SubCategory(categoryName: "Accessories", name: "Hats"),
+    ])
 
-let footwearCategory = Category(name: "Footwear", subCategories: [
-  Category.SubCategory(categoryName: "Footwear", name: "Mules"),
-  Category.SubCategory(categoryName: "Footwear", name: "Boots"),
-  Category.SubCategory(categoryName: "Footwear", name: "Sneakers"),
-])
+    let footwearCategory = Category(name: "Footwear", subCategories: [
+      Category.SubCategory(categoryName: "Footwear", name: "Mules"),
+      Category.SubCategory(categoryName: "Footwear", name: "Boots"),
+      Category.SubCategory(categoryName: "Footwear", name: "Sneakers"),
+    ])
+    
+    var categoryList = [bottomsCategory, topsCategory, accessoriesCategory, footwearCategory]
+    
+    sampleCategoryData.append(bottomsCategory)
 
-var categoryList = [bottomsCategory, topsCategory, accessoriesCategory, footwearCategory]
+    return sampleCategoryData
+  }()
+}
+
+
