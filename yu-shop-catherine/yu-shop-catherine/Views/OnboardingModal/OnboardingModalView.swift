@@ -38,6 +38,7 @@ struct OnboardingModalView: View {
         OnboardingFeatures(text: "Apply a discount code at the checkout page")
         OnboardingFeatures(text: "Write a review and add a photo of the product(s) you purchased")
       }
+      .listStyle(.grouped)
     }
   }
 }

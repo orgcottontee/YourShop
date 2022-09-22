@@ -15,15 +15,18 @@ struct CategoryView: View {
   var body: some View {
     
     NavigationView {
-      ScrollView(.horizontal) {
-        LazyHGrid(rows: columns, spacing: 20) {
-          ForEach(categories, id: \.id) { category in
-            CategoryCard(category: category)
+      ZStack {
+        Color("BackgroundColor").edgesIgnoringSafeArea(.all)
+        ScrollView(.horizontal) {
+          LazyHGrid(rows: columns, spacing: 20) {
+            ForEach(categories, id: \.id) { category in
+              CategoryCard(category: category)
+            }
           }
+          .padding()
         }
-        .padding()
+        .navigationTitle("Categories")
       }
-      .navigationTitle("Categories")
     }
   }
 }

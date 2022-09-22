@@ -13,23 +13,26 @@ struct CartView: View {
   
   var body: some View {
     NavigationView {
-      List {
-        ForEach(bag.products) { product in
-          HStack(alignment: .center) {
-            Text(product.name)
-              .font(.title)
-              .bold()
-              .padding()
-            
-            Spacer()
-            
-            Text("Size: \(product.size)")
-              .font(.headline)
-              .bold()
-              .padding()
+      ZStack {
+        Color("BackgroundColor").edgesIgnoringSafeArea(.all)
+        List {
+          ForEach(bag.products) { product in
+            HStack(alignment: .center) {
+              Text(product.name)
+                .font(.title)
+                .bold()
+                .padding()
+              
+              Spacer()
+              
+              Text("Size: \(product.size)")
+                .font(.headline)
+                .bold()
+                .padding()
+            }
           }
+          .navigationTitle("Your Shopping bag")
         }
-        .navigationTitle("Your Shopping bag")
       }
     }
   }
