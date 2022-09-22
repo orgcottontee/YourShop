@@ -9,14 +9,14 @@ import SwiftUI
 
 struct CategoryView: View {
   
-  var columns = GridItem(.adaptive(minimum: 200)
+  var columns = [GridItem(.flexible())]
   var categories: [Category]
   
   var body: some View {
     
     NavigationView {
-      ScrollView {
-        LazyVGrid(columns: columns, spacing: 20) {
+      ScrollView(.horizontal) {
+        LazyHGrid(rows: columns, spacing: 20) {
           ForEach(categories, id: \.id) { category in
             CategoryCard(category: category)
           }
