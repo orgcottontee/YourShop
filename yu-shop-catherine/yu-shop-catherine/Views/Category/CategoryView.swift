@@ -9,16 +9,16 @@ import SwiftUI
 
 struct CategoryView: View {
   
-  var columns = [GridItem(.adaptive(minimum: 160), spacing: 30)]
-  var categoryList: [Category]
+  var columns = GridItem(.adaptive(minimum: 200)
+  var categories: [Category]
   
   var body: some View {
     
     NavigationView {
       ScrollView {
         LazyVGrid(columns: columns, spacing: 20) {
-          ForEach(productList, id: \.id) { product in
-            CategoryCard(product: product)
+          ForEach(categories, id: \.id) { category in
+            CategoryCard(category: category)
           }
         }
         .padding()
@@ -30,6 +30,6 @@ struct CategoryView: View {
 
 struct CategoryView_Previews: PreviewProvider {
   static var previews: some View {
-    CategoryView(categoryList: Category.sampleCategory)
+    CategoryView(categories: Category.sampleCategory)
   }
 }

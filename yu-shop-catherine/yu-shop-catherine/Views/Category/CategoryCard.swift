@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct CategoryCard: View {
-  
-  var product: Product
+
+  var category: Category
   
   var body: some View {
     
     ZStack(alignment: .bottom) {
-      Image(product.image)
+      Image(category.image)
         .resizable()
         .cornerRadius(4)
         .frame(width: 180)
         .scaledToFit()
       
       VStack(alignment: .leading) {
-        Text(product.name)
+        Text(category.name)
           .bold()
       }
       .padding(10)
@@ -36,6 +36,6 @@ struct CategoryCard: View {
 
 struct CategoryCard_Previews: PreviewProvider {
   static var previews: some View {
-    CategoryCard(product: productList[0])
+    CategoryCard(category: Category.sampleCategory.first!)
   }
 }
