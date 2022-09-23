@@ -26,13 +26,15 @@ struct CategoryView: View {
             ForEach(categories, id: \.id) { category in
               CategoryCard(category: category)
             }
+       //     NavigationLink(destination: ProductDetailView(product: product)) {
+              
+            }
           }
           .padding()
         }
       }
     }
   }
-}
 
 struct CategoryView_Previews: PreviewProvider {
   static var previews: some View {
