@@ -14,9 +14,13 @@ struct CategoryView: View {
   
   var body: some View {
     
-    NavigationView {
-      ZStack {
-        Color("BackgroundColor").edgesIgnoringSafeArea(.all)
+    ZStack {
+      Color("BackgroundColor").edgesIgnoringSafeArea(.all)
+      VStack(alignment: .leading) {
+        Text("Yu Shop")
+          .kerning(4)
+          .rotationEffect(Angle(degrees: -90))
+          .font(.largeTitle.bold())
         ScrollView(.horizontal) {
           LazyHGrid(rows: columns, spacing: 20) {
             ForEach(categories, id: \.id) { category in
@@ -25,7 +29,6 @@ struct CategoryView: View {
           }
           .padding()
         }
-        .navigationTitle("Categories")
       }
     }
   }

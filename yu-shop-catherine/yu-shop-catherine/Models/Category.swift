@@ -98,12 +98,12 @@ extension Category {
   ]}()
 }
 
-var categoryList = Category.sampleCategory
-var firstCategory = categoryList.first
-var firstSubCategory = firstCategory?.subCategories.first
-var subCategoryName1 = categoryList.first?.subCategories.first?.name
-var subCategoryName2 = firstCategory?.subCategories.first?.name
-var subCategoryName3 = firstSubCategory?.name
+//var categoryList = Category.sampleCategory
+//var firstCategory = categoryList.first
+//var firstSubCategory = firstCategory?.subCategories.first
+//var subCategoryName1 = categoryList.first?.subCategories.first?.name
+//var subCategoryName2 = firstCategory?.subCategories.first?.name
+//var subCategoryName3 = firstSubCategory?.name
 
 
 
