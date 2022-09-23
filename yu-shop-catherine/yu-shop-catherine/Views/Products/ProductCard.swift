@@ -15,8 +15,10 @@ struct ProductCard: View {
       ZStack(alignment: .bottom) {
         Image(product.image)
           .resizable()
+          .frame(width: 180)
           .cornerRadius(4)
           .scaledToFit()
+          
         
         VStack(alignment: .leading) {
           Text(product.name)
@@ -24,10 +26,13 @@ struct ProductCard: View {
         }
         .padding(10)
         .frame(alignment: .leading)
+        .frame(width: 180)
         .cornerRadius(4)
+        .background(.ultraThinMaterial)
+        
       }
       .frame(width: 180, height: 250)
-      .shadow(radius: 3)
+      .shadow(radius: 10)
     }
 }
 

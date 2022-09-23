@@ -9,45 +9,31 @@ import SwiftUI
 
 struct ProductListView: View {
   
-  //var columns = [GridItem(.adaptive(minimum: 80))]
-//columns: columns, spacing: 20
+  var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
+  var products = productList
   
   var body: some View {
-    
-    NavigationView {
+      
       ZStack {
         Color("BackgroundColor").edgesIgnoringSafeArea(.all)
-       // VStack(alignment: .leading) {
-//          Text("Yu Shop")
-//            .kerning(4)
-//            .rotationEffect(Angle(degrees: -90))
-//            .font(.largeTitle.bold())
-          ScrollView() {
-            LazyVStack {
-              ForEach(productList) { product in
-                NavigationLink(destination: ProductDetailView(product: product)) {
-                  Text(product.name)
-                    .font(.title)
-                    .bold()
-                    .padding()
-                  
-                  Spacer()
-                  
-                  Image(product.image)
-                    .resizable()
-                    .cornerRadius(4)
-                    .frame(width: 180)
-                    .scaledToFit()
-                  
-                }
+        VStack(alignment: .leading) {
+          Text("Products")
+            .kerning(4)
+            .font(.largeTitle.bold())
+            .padding()
+          ScrollView {
+            LazyVGrid(columns:columns, spacing: 20) {
+              ForEach(products, id: \.id) { product in
+                ProductCard(product: product)
+              }
+         //     NavigationLink(destination: ProductDetailView(product: product)) {
                 
               }
             }
             .padding()
           }
-       // }
+        }
       }
-    }
     
     
     //    NavigationView {
@@ -73,7 +59,6 @@ struct ProductListView: View {
     //      .navigationTitle("Products")
     //    }
   }
-}
 
 struct ProductsView_Previews: PreviewProvider {
   static var previews: some View {
