@@ -19,11 +19,17 @@ struct TabBar: View {
         }
         .tag(0)
       
-      ProductListView()
-        .tabItem {
-          Label("Browse", systemImage: "magnifyingglass")
-        }
-        .tag(1)
+      NavigationView {
+        ProductListView()
+        //          .tabItem {
+        //            Label("Browse", systemImage: "magnifyingglass")
+        //          }
+        //        .tag(1)
+      }
+      .tabItem {
+        Label("Browse", systemImage: "magnifyingglass")
+      }
+      .tag(1)
       
       WelcomeView()
         .tabItem {

@@ -41,15 +41,6 @@ struct WelcomeView: View {
         
         Spacer()
         
-        Button {
-          showHomeView.toggle()
-        } label: {
-          StartBrowsingText(text: "Start Browsing")
-        }
-        .fullScreenCover(isPresented: $showHomeView) {
-          HomeTabView()
-        }
-        Spacer()
       }
     }
   }

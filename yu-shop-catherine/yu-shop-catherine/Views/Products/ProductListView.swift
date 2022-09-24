@@ -13,55 +13,56 @@ struct ProductListView: View {
   var products = productList
   
   var body: some View {
-      
-      ZStack {
-        Color("BackgroundColor").edgesIgnoringSafeArea(.all)
-        VStack(alignment: .leading) {
-          Text("Products")
-            .kerning(4)
-            .font(.largeTitle.bold())
-            .padding()
-          ScrollView {
-            LazyVGrid(columns:columns, spacing: 20) {
-              ForEach(products, id: \.id) { product in
+    
+    ZStack {
+      Color("BackgroundColor").edgesIgnoringSafeArea(.all)
+      VStack(alignment: .leading) {
+        Text("Products")
+          .kerning(4)
+          .font(.largeTitle.bold())
+          .padding()
+        ScrollView {
+          LazyVGrid(columns:columns, spacing: 20) {
+            ForEach(products, id: \.id) { product in
+              NavigationLink(destination: ProductDetailView(product: product)) {
                 ProductCard(product: product)
               }
-         //     NavigationLink(destination: ProductDetailView(product: product)) {
-                
-              }
+            // Forward to ProductDetailView when users click
             }
-            .padding()
+            
           }
+          .padding()
         }
       }
-    
-    
-    //    NavigationView {
-    //      List {
-    //        ForEach(productList) { product in
-    //          NavigationLink(destination: ProductDetailView(product: product)) {
-    //            HStack(alignment: .center) {
-    //              Text(product.name)
-    //                .font(.title)
-    //                .bold()
-    //                .padding()
-    //
-    //              Spacer()
-    //
-    //              Text("Size: \(product.size)")
-    //                .font(.headline)
-    //                .bold()
-    //                .padding()
-    //            }
-    //          }
-    //        }
-    //      }
-    //      .navigationTitle("Products")
-    //    }
+    }
   }
-
-struct ProductsView_Previews: PreviewProvider {
-  static var previews: some View {
-    ProductListView()
+  
+  //    NavigationView {
+  //      List {
+  //        ForEach(productList) { product in
+  //          NavigationLink(destination: ProductDetailView(product: product)) {
+  //            HStack(alignment: .center) {
+  //              Text(product.name)
+  //                .font(.title)
+  //                .bold()
+  //                .padding()
+  //
+  //              Spacer()
+  //
+  //              Text("Size: \(product.size)")
+  //                .font(.headline)
+  //                .bold()
+  //                .padding()
+  //            }
+  //          }
+  //        }
+  //      }
+  //      .navigationTitle("Products")
+  //    }
+  
+  struct ProductsView_Previews: PreviewProvider {
+    static var previews: some View {
+      ProductListView()
+    }
   }
 }

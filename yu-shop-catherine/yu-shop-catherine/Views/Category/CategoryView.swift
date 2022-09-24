@@ -26,8 +26,8 @@ struct CategoryView: View {
             ForEach(categories, id: \.id) { category in
               CategoryCard(category: category)
             }
-       //     NavigationLink(destination: ProductDetailView(product: product)) {
-              
+            //NavigationLink(destination: ProductDetailView(product: product)) {
+            //Forward to CategoryDetailView(not yet created) when users click
             }
           }
           .padding()

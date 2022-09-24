@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProductCard: View {
-  
+//  NavigationLink("Product", destination: ProductDetailView(product: product))
   var product: Product
   
     var body: some View {

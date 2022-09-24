@@ -55,7 +55,10 @@ import Foundation
 //  ]
 //}
 
+/// Category Struct
 struct Category: Identifiable {
+  
+  /// Properties
   let id = UUID()
   let name: String
   let image: String
