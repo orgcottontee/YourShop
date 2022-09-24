@@ -27,42 +27,17 @@ struct ProductListView: View {
               NavigationLink(destination: ProductDetailView(product: product)) {
                 ProductCard(product: product)
               }
-            // Forward to ProductDetailView when users click
             }
-            
           }
           .padding()
         }
       }
     }
   }
-  
-  //    NavigationView {
-  //      List {
-  //        ForEach(productList) { product in
-  //          NavigationLink(destination: ProductDetailView(product: product)) {
-  //            HStack(alignment: .center) {
-  //              Text(product.name)
-  //                .font(.title)
-  //                .bold()
-  //                .padding()
-  //
-  //              Spacer()
-  //
-  //              Text("Size: \(product.size)")
-  //                .font(.headline)
-  //                .bold()
-  //                .padding()
-  //            }
-  //          }
-  //        }
-  //      }
-  //      .navigationTitle("Products")
-  //    }
-  
-  struct ProductsView_Previews: PreviewProvider {
-    static var previews: some View {
-      ProductListView()
-    }
+}
+
+struct ProductsView_Previews: PreviewProvider {
+  static var previews: some View {
+    ProductListView()
   }
 }

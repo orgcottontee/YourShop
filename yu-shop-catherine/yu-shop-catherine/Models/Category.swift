@@ -7,54 +7,6 @@
 
 import Foundation
 
-//struct Category {
-//
-//  struct SubCategory {
-//    let categoryName: String
-//    let name: String
-//  }
-//
-//  let id = UUID()
-//  let name: String
-//  let image: String
-//  let subCategories: [SubCategory]
-//}
-//
-//extension Category {
-//
-//  static let categoryList = [
-//    ( name: "Bottoms",
-//      image: "Bottoms",
-//      subCategories: [
-//        "Pants",
-//        "Jeans",
-//        "Shorts",
-//      ]),
-//    ( name: "Tops",
-//      image: "Tops",
-//      subCategories: [
-//        "Tshirt",
-//        "Sweater",
-//        "Outerwear",
-//      ]),
-//    ( name: "Accessories",
-//      image: "Accessories",
-//      subCategories: [
-//        "Socks",
-//        "Jewelry",
-//        "Hats",
-//      ]),
-//    ( name: "Footwear",
-//      image: "Footwear",
-//      subCategories: [
-//        "Mules",
-//        "Sneakerss",
-//        "Boots",
-//      ]),
-//
-//  ]
-//}
-
 /// Category Struct
 struct Category: Identifiable {
   
@@ -100,18 +52,3 @@ extension Category {
     ]),
   ]}()
 }
-
-//var categoryList = Category.sampleCategory
-//var firstCategory = categoryList.first
-//var firstSubCategory = firstCategory?.subCategories.first
-//var subCategoryName1 = categoryList.first?.subCategories.first?.name
-//var subCategoryName2 = firstCategory?.subCategories.first?.name
-//var subCategoryName3 = firstSubCategory?.name
-
-
-
-
-
-
-
-
