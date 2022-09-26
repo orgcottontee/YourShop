@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct WelcomeView: View {
-  
+  /// State Design Pattern
   @State var showOnboardingModal = false
-  @State var showHomeView = false
   
   var body: some View {
     
@@ -28,6 +27,7 @@ struct WelcomeView: View {
         WelcomeText(text: Constants.title.homeTitle)
         UserName(text: "Theo")
         Button(action: {
+          /// State Design Pattern
           showOnboardingModal.toggle()
         }) {
           Image(systemName: Constants.SfSymbols.homeView)

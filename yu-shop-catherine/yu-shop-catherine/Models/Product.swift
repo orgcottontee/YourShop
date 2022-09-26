@@ -7,6 +7,7 @@
 
 import Foundation
 
+///Model: Data Container
 struct Product: Identifiable {
   let id = UUID()
   let name: String

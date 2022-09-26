@@ -7,10 +7,9 @@
 
 import Foundation
 
-/// Category Struct
+///Model: Data Container
 struct Category: Identifiable {
-  
-  /// Properties
+
   let id = UUID()
   let name: String
   let image: String

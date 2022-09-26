@@ -13,7 +13,6 @@ struct ProfileView: View {
       VStack {
         Text("Customer profile")
       }
-      .navigationTitle("Your Profile")
     }
   }
 }
