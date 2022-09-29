@@ -12,36 +12,48 @@ struct TabBar: View {
   @EnvironmentObject var bag: Bag
   
   var body: some View {
+    
     TabView {
-      CategoryView()
-        .tabItem {
-          Label("Categories", systemImage: "rectangle.3.group")
-        }
-        .tag(0)
+      NavigationView {
+        CategoryView(categories: Category.sampleCategory)
+      }
+      .tabItem {
+        Label("Categories", systemImage: "rectangle.3.group")
+      }
+      .tag(0)
       
-      ProductListView()
-        .tabItem {
-          Label("Browse", systemImage: "magnifyingglass")
-        }
-        .tag(1)
+      NavigationView {
+        ProductListView()
+      }
+      .tabItem {
+        Label("Browse", systemImage: "magnifyingglass")
+      }
+      .tag(1)
       
-      WelcomeView()
-        .tabItem {
-          Label("Home", systemImage: "house")
-        }
+      NavigationView {
+        WelcomeView()
+      }
+      .tabItem {
+        Label("Home", systemImage: "house")
+      }
+      .tag(2)
       
-      ProfileView()
-        .tabItem {
-          Label("Profile", systemImage: "tshirt")
-        }
-        .tag(2)
+      NavigationView {
+        ProfileView()
+      }
+      .tabItem {
+        Label("Profile", systemImage: "tshirt")
+      }
+      .tag(3)
       
-      CartView()
-        .badge(bag.products.count)
-        .tabItem {
-          Label("Bag", systemImage: "bag")
-        }
-        .tag(3)
+      NavigationView {
+        CartView()
+      }
+      .badge(bag.products.count)
+      .tabItem {
+        Label("Bag", systemImage: "bag")
+      }
+      .tag(4)
     }
     .accentColor(Color("TextColor"))
   }

@@ -7,43 +7,47 @@
 
 import Foundation
 
+///Model: Data Container
 struct Category: Identifiable {
+
   let id = UUID()
+  let name: String
+  let image: String
+  
   struct SubCategory {
     let categoryName: String
     let name: String
   }
   
-  let name: String
   let subCategories: [SubCategory]
 }
 
 extension Category {
-  static let categoryList = [
-    (name: "Bottoms", SubCategory: [
-      "Pants",
-      "Trousers",
-      "Skirt",
-      "Shorts",
+  
+  static var sampleCategory: [Category] = {[
+    
+    Category(name: "Bottoms", image: "Bottoms", subCategories: [
+      Category.SubCategory(categoryName: "Bottoms", name: "Pants"),
+      Category.SubCategory(categoryName: "Bottoms", name: "Jeans"),
+      Category.SubCategory(categoryName: "Bottoms", name: "Shorts"),
     ]),
-    (name: "Tops", SubCategory: [
-      "Tshirt",
-      "Puffer",
-      "Hoodie",
-      "Jacket"
+    
+    Category(name: "Tops", image: "Tops", subCategories: [
+      Category.SubCategory(categoryName: "Tops", name: "T-shirt"),
+      Category.SubCategory(categoryName: "Tops", name: "Sweater"),
+      Category.SubCategory(categoryName: "Tops", name: "Outerwear"),
     ]),
-    (name: "Accessories", SubCategory: [
-      "Necklace",
-      "Earrings",
-      "Rings",
-      "Socks"
+    
+    Category(name: "Accessories", image: "Accessories", subCategories: [
+      Category.SubCategory(categoryName: "Accessories", name: "Socks"),
+      Category.SubCategory(categoryName: "Accessories", name: "Jewelry"),
+      Category.SubCategory(categoryName: "Accessories", name: "Hats"),
     ]),
-    (name: "Footwear", SubCategory: [
-      "Sneakers",
-      "Mules",
-      "Slides",
-      "Boots"
+    
+    Category(name: "Footwear", image: "Footwear", subCategories: [
+      Category.SubCategory(categoryName: "Footwear", name: "Mules"),
+      Category.SubCategory(categoryName: "Footwear", name: "Boots"),
+      Category.SubCategory(categoryName: "Footwear", name: "Sneakers"),
     ]),
-  ]
+  ]}()
 }
-

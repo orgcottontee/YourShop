@@ -9,26 +9,35 @@ import SwiftUI
 
 struct CategoryView: View {
   
-  var columns = [GridItem(.adaptive(minimum: 160), spacing: 30)]
+  var columns = [GridItem(.flexible())]
+  var categories: [Category]
   
   var body: some View {
     
-    NavigationView {
-      ScrollView {
-        LazyVGrid(columns: columns, spacing: 20) {
-          ForEach(productList, id: \.id) { product in
-            CategoryCard(product: product)
+    ZStack {
+      Color("BackgroundColor").edgesIgnoringSafeArea(.all)
+      VStack(alignment: .leading) {
+        Text("Yu Shop")
+          .kerning(4)
+          .rotationEffect(Angle(degrees: -90))
+          .font(.largeTitle.bold())
+        ScrollView(.horizontal) {
+          LazyHGrid(rows: columns, spacing: 20) {
+            ForEach(categories, id: \.id) { category in
+              CategoryCard(category: category)
+            }
+            //NavigationLink(destination: ProductDetailView(product: product)) {
+            //Forward to CategoryDetailView(not yet created) when users click
+            }
           }
+          .padding()
         }
-        .padding()
       }
-      .navigationTitle("Categories")
     }
   }
-}
 
 struct CategoryView_Previews: PreviewProvider {
   static var previews: some View {
-    CategoryView()
+    CategoryView(categories: Category.sampleCategory)
   }
 }
