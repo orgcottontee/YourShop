@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>
+</string>
+			<key>ModifiedRange</key>
+			<string>{100, 1}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{100, 0}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string></string>
+			<key>ModifiedRange</key>
+			<string>{486, 0}</string>
+			<key>OriginalContent</key>
+			<string>
+
+// create a work item for both task 
+
+
+
+// Add the getActorTask and getMovieTask to the Dispatch Work Item created 
+
+</string>
+			<key>OriginalRange</key>
+			<string>{485, 119}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// 1. Create a work item for both tasks. 
+// 2. Add the getActorTask and getMovieTask to the Dispatch Work Item created. 
+var workItem = DispatchWorkItem {
+    getActorTask()
+    getMovieTask()
+}
+// Cancel the work item after 10 seconds using the asyncAfter provided. 
+</string>
+			<key>ModifiedRange</key>
+			<string>{487, 269}</string>
+			<key>OriginalContent</key>
+			<string>// cancel the work item after 10 seconds using the asyncAfter provided. 
+</string>
+			<key>OriginalRange</key>
+			<string>{605, 73}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>    // 3. Add Code to cancel workItem here.
+    workItem.cancel()
+}
+
+// 4. Call perform on the work item. 
+DispatchQueue.global().sync {
+    workItem.perform()
+}
+</string>
+			<key>ModifiedRange</key>
+			<string>{856, 162}</string>
+			<key>OriginalContent</key>
+			<string>    // Add Code to cancel workItem here
+}
+
+
+// call perform on the workitem 
+
+
+</string>
+			<key>OriginalRange</key>
+			<string>{778, 79}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// Assignment Question: why is the Movie task completed yet the dispatch work item has been cancelled?
+</string>
+			<key>ModifiedRange</key>
+			<string>{1060, 103}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{899, 0}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>A</string>
+			<key>ModifiedRange</key>
+			<string>{1167, 1}</string>
+			<key>OriginalContent</key>
+			<string>Qestio</string>
+			<key>OriginalRange</key>
+			<string>{903, 6}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>swer</string>
+			<key>ModifiedRange</key>
+			<string>{1169, 4}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{910, 0}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>T</string>
+			<key>ModifiedRange</key>
+			<string>{1175, 1}</string>
+			<key>OriginalContent</key>
+			<string>why is the Movie task completed yet the dispatch work item </string>
+			<key>OriginalRange</key>
+			<string>{912, 59}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>e specific task will still execute if you don't explicitly tell it to cancel (.isCancelled)</string>
+			<key>ModifiedRange</key>
+			<string>{1177, 91}</string>
+			<key>OriginalContent</key>
+			<string>as been cancelled ?</string>
+			<key>OriginalRange</key>
+			<string>{972, 19}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
