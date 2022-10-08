@@ -27,6 +27,7 @@
 		DE7AB20428D2A86A002C4FC7 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7AB20328D2A86A002C4FC7 /* WelcomeView.swift */; };
 		DE8AB1C228EA513000974761 /* Week7Catherine.playgroundbook in Resources */ = {isa = PBXBuildFile; fileRef = DE8AB1C128EA513000974761 /* Week7Catherine.playgroundbook */; };
 		DECE3CA528C632120061E59D /* Discounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECE3CA428C632120061E59D /* Discounts.swift */; };
+		DED83CBA28F23255005275D4 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83CB928F23255005275D4 /* SplashScreenView.swift */; };
 		DEE59BF628B3AB930095CDFE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE59BF528B3AB930095CDFE /* Constants.swift */; };
 		DEE754EC28CAEF1D00055345 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE754EB28CAEF1D00055345 /* ProductListView.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		DE7AB20328D2A86A002C4FC7 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		DE8AB1C128EA513000974761 /* Week7Catherine.playgroundbook */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Week7Catherine.playgroundbook; sourceTree = "<group>"; };
 		DECE3CA428C632120061E59D /* Discounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discounts.swift; sourceTree = "<group>"; };
+		DED83CB928F23255005275D4 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		DEE59BF528B3AB930095CDFE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DEE754EB28CAEF1D00055345 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,6 +187,7 @@
 			children = (
 				DE5B5A3728D6ABF100F87EE6 /* TabBar.swift */,
 				DE034B4028B074B4006289D2 /* HomeTabView.swift */,
+				DED83CB928F23255005275D4 /* SplashScreenView.swift */,
 				DE33BB6628D6E0440032B150 /* OnboardingModal */,
 				DE488DAF28D3FD1000228835 /* Welcome */,
 				DE33BB6D28D7013E0032B150 /* Category */,
@@ -273,6 +276,7 @@
 				DECE3CA528C632120061E59D /* Discounts.swift in Sources */,
 				DE034B4128B074B4006289D2 /* HomeTabView.swift in Sources */,
 				DE7AB20228D2666C002C4FC7 /* ProfileView.swift in Sources */,
+				DED83CBA28F23255005275D4 /* SplashScreenView.swift in Sources */,
 				DE33BB6C28D6FEF70032B150 /* Bag.swift in Sources */,
 				DE33BB6A28D6EA190032B150 /* CategoryView.swift in Sources */,
 				DE488DB328D3FF4C00228835 /* WelcomeTextView.swift in Sources */,
