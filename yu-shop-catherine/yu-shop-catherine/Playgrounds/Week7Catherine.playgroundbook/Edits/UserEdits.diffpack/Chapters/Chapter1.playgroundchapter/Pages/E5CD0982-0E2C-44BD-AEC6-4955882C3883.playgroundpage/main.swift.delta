@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// 1. Add appropriate QOS to show avocado toast is more important than pineapple pizza.
+
+let pineapplePizzaQueue = DispatchQueue(label: "com.raywenderlich.queue1", qos: .background, attributes: .concurrent)
+// Original: let pineapplePizzaQueue = DispatchQueue(label: "com.raywenderlich.queue1")
+
+let avocadoToastQueue = DispatchQueue(label: "com.raywenderlich.queue2", qos: .userInitiated, attributes: .concurrent)
+// Original: let avocadoToastQueue = DispatchQueue(label: "com.raywenderlich.queue2")
+</string>
+			<key>ModifiedRange</key>
+			<string>{100, 501}</string>
+			<key>OriginalContent</key>
+			<string>//Add appropriate QOS to show avocado Toast is more important than pineapple Pizza
+
+let pineapplePizzaQueue = DispatchQueue(label: "com.raywenderlich.queue1")
+let avocadoToastQueue = DispatchQueue(label: "com.raywenderlich.queue2")
+</string>
+			<key>OriginalRange</key>
+			<string>{100, 232}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>2</string>
+			<key>ModifiedRange</key>
+			<string>{647, 1}</string>
+			<key>OriginalContent</key>
+			<string>1</string>
+			<key>OriginalRange</key>
+			<string>{378, 1}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>2</string>
+			<key>ModifiedRange</key>
+			<string>{730, 1}</string>
+			<key>OriginalContent</key>
+			<string>1</string>
+			<key>OriginalRange</key>
+			<string>{461, 1}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string></string>
+			<key>ModifiedRange</key>
+			<string>{770, 0}</string>
+			<key>OriginalContent</key>
+			<string>
+
+
+</string>
+			<key>OriginalRange</key>
+			<string>{501, 3}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>
+// Assignment Question: Once you have added the Quality of Service, try running the playground several times and you will notice that sometimes the CPU doesn’t obey the QoS priority. Why is that?
+
+// Answer: When submitting a task with a a higher quality of service than the queue has, the queue’s level will increase. Not only that, but all the operations enqueued will also have their priority raised as well. If the current context is the main thread, the inferred QoS is .userInitiated. You can specify a QoS yourself, but as soon as you’ll add a task with a higher QoS, your queue’s QoS service will be increased to match it. It's all about increasing probablity, so the outcome is not exact.
+</string>
+			<key>ModifiedRange</key>
+			<string>{811, 699}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{545, 0}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
