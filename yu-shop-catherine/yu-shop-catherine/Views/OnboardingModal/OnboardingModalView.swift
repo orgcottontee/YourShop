@@ -22,7 +22,7 @@ struct OnboardingModalView: View {
         Button(action: {
           presentationMode.wrappedValue.dismiss()
         }) {
-          Image(systemName: Constants.SfSymbols.onboardingModal)
+          Image(systemName: Constants.SfSymbols.onboardingModalView)
             .foregroundColor(Color("TextColor"))
             .font(.system(size: Constants.SfSymbols.size , weight: .ultraLight))
         }

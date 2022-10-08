@@ -11,8 +11,9 @@ import UIKit
 enum Constants {
   enum SfSymbols {
     public static let size = CGFloat(34.0)
-    public static let homeView = "hand.wave"
-    public static let onboardingModal = "clear"
+    public static let welcomeView = "hand.wave"
+    public static let onboardingModalView = "clear"
+    public static let splashScreenView = "tshirt"
   }
   
   enum appInfo {
