@@ -27,8 +27,6 @@ class Bag: ObservableObject {
 /// MVVM:
 ///   - My Model and ViewModel lives here in my Bag file
 ///   - This Model & ViewModel is then displayed in TabBar, ProductDetailView, and CartView
-/// State:
-///   - Utilized State design pattern in my WelcomeView
 /// Observer:
 ///   - The Observer design pattern also lives here in my Bag file. The OberservableObject or Publisher sends the updates
 ///   - The Observer patten also lives in TabBar, ProductDetailView, and CartView. They are the subscribers or the ObserverObject, and receives updates.

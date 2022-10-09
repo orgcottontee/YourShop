@@ -37,7 +37,7 @@ struct ProductDetailView: View {
         }
         
         VStack(alignment: .center) {
-          Text(product.name)
+         Text(product.name)
             .font(.headline)
             .foregroundColor( .init(white: 0.4) )
             .padding(10)

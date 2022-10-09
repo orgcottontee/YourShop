@@ -10,7 +10,7 @@ import SwiftUI
 struct ProductListView: View {
   
   var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
-  var products = productList
+  var products = Product(from: <#Decoder#>)
   
   var body: some View {
     

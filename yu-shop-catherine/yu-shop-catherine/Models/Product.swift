@@ -8,16 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Product: Codable {
-    let id: Int
-    let title: String
-    let price: Double
-    let description, category: String
-    let image: String
-}
-
 /// Former Product Object
-/*
 struct Product: Identifiable {
   let id = UUID()
   let name: String
@@ -39,6 +30,6 @@ var productList = [
   Product(name: "Linden Jumper", size: "S", image: "Jumper", price: 120, description: "Hand Knit Ecru 100% Cotton "),
   Product(name: "Lilac Shirt", size: "XS", image: "Buttondown", price: 99, description: "Button up or button down?")
 ]
-*/
+
 
 
