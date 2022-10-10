@@ -12,6 +12,7 @@ struct CartView: View {
   @EnvironmentObject var bag: Bag
   
   var body: some View {
+    
     NavigationView {
       ZStack {
         Color("BackgroundColor").edgesIgnoringSafeArea(.all)

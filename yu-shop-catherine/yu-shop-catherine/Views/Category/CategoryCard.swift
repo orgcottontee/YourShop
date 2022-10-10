@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CategoryCard: View {
-
+  
   var category: Category
   
   var body: some View {

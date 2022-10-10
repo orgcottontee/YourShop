@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct ProductCard: View {
+  
   var product: Product
   
   var body: some View {
+    
     ZStack(alignment: .bottom) {
       AsyncImage(url: URL(string: product.image)) { image in
         image.resizable()
           .scaledToFit()
       } placeholder: {
-        SplashScreenView()
+        LoadingAPIImageView()
       }
       .frame(width: 180, height: 180)
-      .cornerRadius(4)
-      
       
       VStack(alignment: .leading) {
-        Text(product.title)
+        Text("$ \(String(format: "%.1f", product.price))")
           .bold()
       }
       .padding(10)
@@ -33,8 +33,8 @@ struct ProductCard: View {
       .background(.ultraThinMaterial)
       
     }
-    .frame(width: 180, height: 250)
-    .shadow(radius: 10)
+    .frame(width: 180, height: 180)
+    .shadow(radius: 5)
   }
 }
 

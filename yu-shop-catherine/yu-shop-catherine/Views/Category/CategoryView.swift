@@ -26,15 +26,15 @@ struct CategoryView: View {
             ForEach(categories, id: \.id) { category in
               CategoryCard(category: category)
             }
-            //NavigationLink(destination: ProductDetailView(product: product)) {
-            //Forward to CategoryDetailView(not yet created) when users click
-            }
+            // NavigationLink(destination: ProductDetailView(product: product)) {
+            // Forward to CategoryDetailView(not yet created) when users click
           }
-          .padding()
         }
+        .padding()
       }
     }
   }
+}
 
 struct CategoryView_Previews: PreviewProvider {
   static var previews: some View {

@@ -10,8 +10,8 @@ import SwiftUI
 struct SplashScreenView: View {
   
   @State private var isActive = false
-  @State private var size = 0.8
-  @State private var opactiy  = 0.5
+  @State private var size = 0.1
+  @State private var opacity  = 0.4
   
   var body: some View {
     
@@ -25,11 +25,11 @@ struct SplashScreenView: View {
             .foregroundColor(Color("TextColor"))
         }
         .scaleEffect(size)
-        .opacity(opactiy)
+        .opacity(opacity)
         .onAppear {
           withAnimation(.easeIn(duration: 1.2)) {
-            self.size = 0.9
-            self.opactiy = 1.0
+            self.size = 0.7
+            self.opacity = 0.7
           }
         }
       }

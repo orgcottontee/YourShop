@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WelcomeView: View {
-  /// State Design Pattern
+  
   @State var showOnboardingModal = false
   
   var body: some View {

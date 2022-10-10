@@ -189,9 +189,9 @@
 		DEEB219928BBFAAE00B401B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DEF1AC8228F3D64C00122DC7 /* Animations */,
 				DE5B5A3728D6ABF100F87EE6 /* TabBar.swift */,
 				DE034B4028B074B4006289D2 /* HomeTabView.swift */,
+				DEF1AC8228F3D64C00122DC7 /* Animations */,
 				DE33BB6628D6E0440032B150 /* OnboardingModal */,
 				DE488DAF28D3FD1000228835 /* Welcome */,
 				DE33BB6D28D7013E0032B150 /* Category */,

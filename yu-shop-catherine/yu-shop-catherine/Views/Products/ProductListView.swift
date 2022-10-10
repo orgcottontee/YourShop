@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProductListView: View {
+  
   public enum APIError: Error {
     case requestFailed
     case responseDecodingFailed
@@ -16,7 +17,6 @@ struct ProductListView: View {
   
   @State private var products: [Product] = []
   var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
-  // var products = productList
   
   var body: some View {
     
