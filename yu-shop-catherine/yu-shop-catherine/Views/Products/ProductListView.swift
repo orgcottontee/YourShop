@@ -55,7 +55,7 @@ struct ProductListView: View {
   }
   
   func fetchProducts() async throws -> [Product] {
-    guard let url = URL(string: "https://fakestoreapi.com/products") else {
+    guard let url = URL(string: "http://fakestoreapi.com/products") else {
       throw APIError.urlCreationFailed
     }
     let configuration = URLSessionConfiguration.default
