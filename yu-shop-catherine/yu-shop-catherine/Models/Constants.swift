@@ -14,6 +14,7 @@ enum Constants {
     public static let welcomeView = "hand.wave"
     public static let onboardingModalView = "clear"
     public static let splashScreenView = "tshirt"
+    public static let loadingAPIImageView = "photo.on.rectangle.angled"
   }
   
   enum appInfo {

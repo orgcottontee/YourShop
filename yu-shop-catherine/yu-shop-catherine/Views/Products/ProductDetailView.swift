@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ProductDetailView: View {
-  
   @EnvironmentObject var bag: Bag
   var product: Product
   

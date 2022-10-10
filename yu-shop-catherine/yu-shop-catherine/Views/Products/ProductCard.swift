@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct ProductCard: View {
-  
   var product: Product
   
   var body: some View {
     ZStack(alignment: .bottom) {
-      Image(product.image)
-        .resizable()
-        .frame(width: 180)
-        .cornerRadius(4)
-        .scaledToFit()
+      AsyncImage(url: URL(string: product.image)) { image in
+        image.resizable()
+          .scaledToFit()
+      } placeholder: {
+        SplashScreenView()
+      }
+      .frame(width: 180, height: 180)
+      .cornerRadius(4)
       
       
       VStack(alignment: .leading) {
@@ -38,6 +40,6 @@ struct ProductCard: View {
 
 //struct ProductCard_Previews: PreviewProvider {
 //  static var previews: some View {
-//    ProductCard(product: productList[1])
+//    ProductCard(product: productList[0])
 //  }
 //}
