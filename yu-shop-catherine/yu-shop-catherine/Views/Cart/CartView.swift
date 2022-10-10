@@ -18,14 +18,14 @@ struct CartView: View {
         List {
           ForEach(bag.products) { product in
             HStack(alignment: .center) {
-              Text(product.name)
+              Text(product.title)
                 .font(.title)
                 .bold()
                 .padding()
               
               Spacer()
               
-              Text("Size: \(product.size)")
+              Text(String(product.price))
                 .font(.headline)
                 .bold()
                 .padding()

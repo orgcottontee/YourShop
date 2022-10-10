@@ -11,7 +11,7 @@ import Foundation
 class Bag: ObservableObject {
   ///ViewModel: An `ObservableObject` with logic that allows the `View` to observe changes of the state
   @Published private(set) var products: [Product] = []
-  @Published private(set) var total: Int = 0
+  @Published private(set) var total: Double = 0
   ///Methods
   func addToBag(product: Product) {
     products.append(product)

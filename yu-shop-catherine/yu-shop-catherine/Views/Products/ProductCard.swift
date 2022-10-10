@@ -21,7 +21,7 @@ struct ProductCard: View {
       
       
       VStack(alignment: .leading) {
-        Text(product.name)
+        Text(product.title)
           .bold()
       }
       .padding(10)
@@ -36,8 +36,8 @@ struct ProductCard: View {
   }
 }
 
-struct ProductCard_Previews: PreviewProvider {
-  static var previews: some View {
-    ProductCard(product: productList[1])
-  }
-}
+//struct ProductCard_Previews: PreviewProvider {
+//  static var previews: some View {
+//    ProductCard(product: productList[1])
+//  }
+//}

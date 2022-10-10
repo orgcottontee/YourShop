@@ -24,7 +24,7 @@ struct ProductDetailView: View {
             .padding()
           
           Button {
-            print("You've added \(product.name) to your bag!")
+            print("You've added \(product.title) to your bag!")
             bag.addToBag(product: product)
           } label: {
             Image(systemName: "plus")
@@ -37,7 +37,7 @@ struct ProductDetailView: View {
         }
         
         VStack(alignment: .center) {
-         Text(product.name)
+         Text(product.title)
             .font(.headline)
             .foregroundColor( .init(white: 0.4) )
             .padding(10)
@@ -49,7 +49,7 @@ struct ProductDetailView: View {
             .multilineTextAlignment(.center)
             .padding(.bottom)
           
-          Text("Size: \(product.size)")
+          Text(String(product.price))
             .font(.title2)
             .multilineTextAlignment(.center)
             .padding()
@@ -65,8 +65,8 @@ struct ProductDetailView: View {
   }
 }
 
-struct ProductDetailView_Previews: PreviewProvider {
-  static var previews: some View {
-    ProductDetailView(product: productList[9])
-  }
-}
+//struct ProductDetailView_Previews: PreviewProvider {
+//  static var previews: some View {
+//    ProductDetailView(product: productList[9])
+//  }
+//}

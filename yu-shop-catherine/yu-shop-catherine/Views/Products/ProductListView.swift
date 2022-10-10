@@ -9,8 +9,9 @@ import SwiftUI
 
 struct ProductListView: View {
   
+  @State private var products: [Product] = []
   var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
-  var products = Product(from: <#Decoder#>)
+  // var products = productList
   
   var body: some View {
     
