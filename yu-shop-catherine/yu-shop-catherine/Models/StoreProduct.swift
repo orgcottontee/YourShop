@@ -13,6 +13,17 @@ class StoreProduct: ObservableObject {
                             relativeTo: FileManager.documentsDirectoryURL).appendingPathExtension("plist")
   
   private func savePListProducts() {
+    let encoder = PropertyListEncoder()
+    encoder.outputFormat = .xml
     
+    do {
+      let productsData = try encoder.encode(prioritizedTasks)
+      
+      try tasksData.write(to: tasksPListURL, options: .atomicWrite)
+    } catch let error {
+      print(error)
+    }
   }
+  
+  
 }
