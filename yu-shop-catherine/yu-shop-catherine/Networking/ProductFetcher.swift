@@ -26,12 +26,10 @@ class ProductFetcher: ObservableObject {
     self.session = URLSession(configuration: sessionConfiguration)
   }
   
-  func fetchProducts() async throws -> [Product] {
+   func fetchProducts() async throws -> [Product] {
     guard let url = URL(string: "http://fakestoreapi.com/products") else {
       throw APIError.urlCreationFailed
     }
-    //    let configuration = URLSessionConfiguration.default
-    //    let session = URLSession(configuration: configuration)
     
     let (data, response) = try await session.data(from: url)
     print("Data downladed \(data)")

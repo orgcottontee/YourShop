@@ -37,12 +37,11 @@ struct ProductListView: View {
     .task {
       do {
         products = try await productFetcher.fetchProducts()
-      } catch APIerror
-        //. APIError.requestFailed {
+      } catch ProductFetcher.APIError.requestFailed {
         print("Your request failed")
-      } catch APIError.responseDecodingFailed {
+      } catch ProductFetcher.APIError.responseDecodingFailed {
         print("Failed response")
-      } catch APIError.urlCreationFailed {
+      } catch ProductFetcher.APIError.urlCreationFailed {
         print("Invalid URL")
       } catch {
         print(error.localizedDescription)
@@ -50,9 +49,9 @@ struct ProductListView: View {
     }
   }
 }
-
-struct ProductsView_Previews: PreviewProvider {
-  static var previews: some View {
-    ProductListView()
+  
+  struct ProductsView_Previews: PreviewProvider {
+    static var previews: some View {
+      ProductListView()
+    }
   }
-}
