@@ -9,12 +9,6 @@ import SwiftUI
 
 struct ProductListView: View {
   
-  public enum APIError: Error {
-    case requestFailed
-    case responseDecodingFailed
-    case urlCreationFailed
-  }
-  
   @State private var products: [Product] = []
   var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
   
@@ -52,24 +46,6 @@ struct ProductListView: View {
         print(error.localizedDescription)
       }
     }
-  }
-  
-  func fetchProducts() async throws -> [Product] {
-    guard let url = URL(string: "http://fakestoreapi.com/products") else {
-      throw APIError.urlCreationFailed
-    }
-    let configuration = URLSessionConfiguration.default
-    let session = URLSession(configuration: configuration)
-    
-    let (data, response) = try await session.data(from: url)
-    print("Data downladed \(data)")
-    guard let httpResponse = response as? HTTPURLResponse,
-          (200..<300).contains(httpResponse.statusCode)
-    else {
-      throw APIError.requestFailed
-    }
-    let productResponse = try JSONDecoder().decode([Product].self, from: data)
-    return productResponse
   }
 }
 
