@@ -9,17 +9,24 @@ import Combine
 import Foundation
 
 class StoreProduct: ObservableObject {
-  let StoreProductURL = URL(fileURLWithPath: "Products",
+  
+  @Published var products: [Product] = [] {
+    didSet {
+      savePListProducts()
+    }
+  }
+  
+  let storeProductURL = URL(fileURLWithPath: "Products",
                             relativeTo: FileManager.documentsDirectoryURL).appendingPathExtension("plist")
   
   private func savePListProducts() {
     let encoder = PropertyListEncoder()
-    encoder.outputFormat = .xml
+    encoder.outputFormat = .binary
     
     do {
-      let productsData = try encoder.encode(prioritizedTasks)
+      let productsData = try encoder.encode(products)
       
-      try tasksData.write(to: tasksPListURL, options: .atomicWrite)
+      try productsData.write(to: storeProductURL, options: .atomicWrite)
     } catch let error {
       print(error)
     }

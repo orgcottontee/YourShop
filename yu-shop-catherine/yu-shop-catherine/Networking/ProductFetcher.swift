@@ -27,12 +27,11 @@ class ProductFetcher: ObservableObject {
   }
   
    func fetchProducts() async throws -> [Product] {
-    guard let url = URL(string: "http://fakestoreapi.com/products") else {
+    guard let url = URL(string: "https://fakestoreapi.com/products") else {
       throw APIError.urlCreationFailed
     }
     
     let (data, response) = try await session.data(from: url)
-    print("Data downladed \(data)")
     guard let httpResponse = response as? HTTPURLResponse,
           (200..<300).contains(httpResponse.statusCode)
     else {
