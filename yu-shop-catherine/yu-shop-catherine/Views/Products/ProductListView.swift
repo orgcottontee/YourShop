@@ -10,6 +10,7 @@ import SwiftUI
 struct ProductListView: View {
   
   @ObservedObject private var productFetcher = ProductFetcher()
+  @ObservedObject var storeProduct: StoreProduct
   @State private var products: [Product] = []
   var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
   
@@ -52,6 +53,6 @@ struct ProductListView: View {
   
   struct ProductsView_Previews: PreviewProvider {
     static var previews: some View {
-      ProductListView()
+      ProductListView(storeProduct: StoreProduct())
     }
   }

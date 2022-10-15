@@ -23,7 +23,7 @@ struct TabBar: View {
       .tag(0)
       
       NavigationView {
-        ProductListView()
+        ProductListView(storeProduct: StoreProduct())
       }
       .tabItem {
         Label("Browse", systemImage: "magnifyingglass")
