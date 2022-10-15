@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct WelcomeTextView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+  var body: some View {
+    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  }
 }
 
 struct WelcomeText: View {
@@ -40,17 +40,17 @@ struct StartBrowsingText: View {
       .kerning(4)
       .foregroundColor(Color("TextColor"))
       .font(.subheadline)
-      
+    
   }
 }
 
 struct WelcomeTextView_Previews: PreviewProvider {
-    static var previews: some View {
-      VStack {
-        WelcomeTextView()
-        WelcomeText(text: "Welcome")
-        UserName(text: "User")
-        StartBrowsingText(text: "Start Browsing")
-      }
+  static var previews: some View {
+    VStack {
+      WelcomeTextView()
+      WelcomeText(text: "Welcome")
+      UserName(text: "User")
+      StartBrowsingText(text: "Start Browsing")
     }
+  }
 }

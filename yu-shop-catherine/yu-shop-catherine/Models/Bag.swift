@@ -7,12 +7,11 @@
 
 import Foundation
 
-/// Model: Data Container. Here you can see an Observer design pattern too.
 class Bag: ObservableObject {
-  ///ViewModel: An `ObservableObject` with logic that allows the `View` to observe changes of the state
+  
   @Published private(set) var products: [Product] = []
-  @Published private(set) var total: Int = 0
-  ///Methods
+  @Published private(set) var total: Double = 0
+  
   func addToBag(product: Product) {
     products.append(product)
     total += product.price
@@ -23,12 +22,3 @@ class Bag: ObservableObject {
     total -= product.price
   }
 }
-
-/// MVVM:
-///   - My Model and ViewModel lives here in my Bag file
-///   - This Model & ViewModel is then displayed in TabBar, ProductDetailView, and CartView
-/// State:
-///   - Utilized State design pattern in my WelcomeView
-/// Observer:
-///   - The Observer design pattern also lives here in my Bag file. The OberservableObject or Publisher sends the updates
-///   - The Observer patten also lives in TabBar, ProductDetailView, and CartView. They are the subscribers or the ObserverObject, and receives updates.
