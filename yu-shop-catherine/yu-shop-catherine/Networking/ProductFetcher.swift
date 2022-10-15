@@ -6,10 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
 
 class ProductFetcher: ObservableObject {
-  
-  @Published var products = [Product]()
   
   enum APIError: Error {
     case requestFailed
@@ -17,16 +16,22 @@ class ProductFetcher: ObservableObject {
     case urlCreationFailed
   }
   
+  @Published var products = [Product]()
+  
+  private let session: URLSession
+  private let sessionConfiguration: URLSessionConfiguration
+  
   init() {
-    
+    self.sessionConfiguration = URLSessionConfiguration.default
+    self.session = URLSession(configuration: sessionConfiguration)
   }
   
   func fetchProducts() async throws -> [Product] {
     guard let url = URL(string: "http://fakestoreapi.com/products") else {
       throw APIError.urlCreationFailed
     }
-    let configuration = URLSessionConfiguration.default
-    let session = URLSession(configuration: configuration)
+    //    let configuration = URLSessionConfiguration.default
+    //    let session = URLSession(configuration: configuration)
     
     let (data, response) = try await session.data(from: url)
     print("Data downladed \(data)")
@@ -38,5 +43,4 @@ class ProductFetcher: ObservableObject {
     let productResponse = try JSONDecoder().decode([Product].self, from: data)
     return productResponse
   }
-  
 }

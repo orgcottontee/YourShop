@@ -62,6 +62,7 @@
 		DED83CB928F23255005275D4 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		DEE59BF528B3AB930095CDFE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DEE754EB28CAEF1D00055345 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
+		DEEFC19728FACFB900614BBF /* Week08.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Week08.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DEF1AC8328F3D66300122DC7 /* LoadingAPIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAPIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +121,7 @@
 			children = (
 				DE8AB1C128EA513000974761 /* Week7Catherine.playgroundbook */,
 				DE38425128BAFCBB00CF4D7F /* yu-shop-playground.playground */,
+				DEEFC19728FACFB900614BBF /* Week08.playground */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";

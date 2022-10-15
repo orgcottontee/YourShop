@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProductListView: View {
   
+  @ObservedObject private var productFetcher = ProductFetcher()
   @State private var products: [Product] = []
   var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
   
@@ -35,8 +36,9 @@ struct ProductListView: View {
     }
     .task {
       do {
-        products = try await fetchProducts()
-      } catch APIError.requestFailed {
+        products = try await productFetcher.fetchProducts()
+      } catch APIerror
+        //. APIError.requestFailed {
         print("Your request failed")
       } catch APIError.responseDecodingFailed {
         print("Failed response")
