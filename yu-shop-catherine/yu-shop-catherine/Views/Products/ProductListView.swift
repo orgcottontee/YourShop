@@ -9,9 +9,13 @@ import SwiftUI
 
 struct ProductListView: View {
   
-  @ObservedObject private var productFetcher = ProductFetcher()
-  @ObservedObject var storeProduct: StoreProduct
-  @State private var products: [Product] = []
+  // Ask Logan:
+    // 1. When do you use @ObservedObject, @State, @StateObject, @EnvironmentObject
+    // 2. When do you use private var versus just var
+    // 3. When do you initialize (productFetcher = ProductFetcher()) versus conform to (productFetcher: ProductFetcher)?
+  
+  //@ObservedObject private var productFetcher = ProductFetcher()
+  @EnvironmentObject var productFetcher: ProductFetcher
   var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
   
   var body: some View {
@@ -25,7 +29,7 @@ struct ProductListView: View {
           .padding()
         ScrollView {
           LazyVGrid(columns:columns, spacing: 20) {
-            ForEach(products, id: \.id) { product in
+            ForEach(productFetcher.products, id: \.id) { product in
               NavigationLink(destination: ProductDetailView(product: product)) {
                 ProductCard(product: product)
               }
@@ -37,7 +41,8 @@ struct ProductListView: View {
     }
     .task {
       do {
-        products = try await productFetcher.fetchProducts()
+        productFetcher.products = try await productFetcher.fetchProducts()
+        //products = try await productFetcher.fetchProducts()
       } catch ProductFetcher.APIError.requestFailed {
         print("Your request failed")
       } catch ProductFetcher.APIError.responseDecodingFailed {
@@ -51,8 +56,8 @@ struct ProductListView: View {
   }
 }
   
-  struct ProductsView_Previews: PreviewProvider {
-    static var previews: some View {
-      ProductListView(storeProduct: StoreProduct())
-    }
-  }
+//  struct ProductsView_Previews: PreviewProvider {
+//    static var previews: some View {
+//      ProductListView(storeProduct: SaveProduct())
+//    }
+//  }

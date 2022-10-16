@@ -16,17 +16,23 @@ class ProductFetcher: ObservableObject {
     case urlCreationFailed
   }
   
-  @Published var products = [Product]()
+  @Published var products = [Product]() {
+    didSet {
+      savePList()
+    }
+  }
   
   private let session: URLSession
   private let sessionConfiguration: URLSessionConfiguration
+  private let savePListURL = URL(fileURLWithPath: "PList Products",
+                                 relativeTo: FileManager.documentsDirectoryURL).appendingPathExtension("plist")
   
   init() {
     self.sessionConfiguration = URLSessionConfiguration.default
     self.session = URLSession(configuration: sessionConfiguration)
   }
   
-   func fetchProducts() async throws -> [Product] {
+  func fetchProducts() async throws -> [Product] {
     guard let url = URL(string: "https://fakestoreapi.com/products") else {
       throw APIError.urlCreationFailed
     }
@@ -40,4 +46,19 @@ class ProductFetcher: ObservableObject {
     let productResponse = try JSONDecoder().decode([Product].self, from: data)
     return productResponse
   }
+  
+  private func savePList() {
+    let encoder = PropertyListEncoder()
+    encoder.outputFormat = .xml
+    
+    do {
+      let productsPListData = try encoder.encode(products)
+      
+      try productsPListData.write(to: savePListURL, options: .atomicWrite)
+    } catch let error {
+      print(error)
+    }
+    
+  }
+  
 }
