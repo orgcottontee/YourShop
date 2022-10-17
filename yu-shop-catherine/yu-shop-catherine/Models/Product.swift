@@ -15,13 +15,4 @@ struct Product: Codable, Identifiable {
   let description: String
   let category: String
   let image: String
-  
-  enum CodingKeys: String, CodingKey {
-    case id
-    case title
-    case price
-    case description
-    case category
-    case image
-  }
 }

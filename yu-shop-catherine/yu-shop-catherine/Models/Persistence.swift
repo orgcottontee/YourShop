@@ -27,7 +27,7 @@ struct PersistenceController {
   let container: NSPersistentContainer
 
   init(inMemory: Bool = false) {
-    container = NSPersistentContainer(name: "RocketLaunches")
+    container = NSPersistentContainer(name: "")
     if inMemory {
       // swiftlint:disable:next force_unwrapping
       container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
