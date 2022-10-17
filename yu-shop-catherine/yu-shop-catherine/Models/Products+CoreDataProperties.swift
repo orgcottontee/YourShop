@@ -6,6 +6,7 @@
 //
 
 import CoreData
+import SwiftUI
 
 extension ProductCoreData {
   @NSManaged public var id: UUID
@@ -14,5 +15,9 @@ extension ProductCoreData {
   @NSManaged public var category: String
   @NSManaged public var price: Double
   @NSManaged public var productDescription: String
+  
+  static func basicFetchRequest() -> FetchRequest<ProductCoreData> {
+    return FetchRequest<ProductCoreData>(entity: ProductCoreData.entity(), sortDescriptors: [])
+  }
 }
 

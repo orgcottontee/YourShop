@@ -9,12 +9,9 @@ import SwiftUI
 
 struct HomeTabView: View {
   
-  let persistenceController = PersistenceController.shared
-  
   var body: some View {
     TabBar()
       .environmentObject(Bag())
-      .environment(\.managedObjectContext, persistenceController.container.viewContext)
   }
 }
 

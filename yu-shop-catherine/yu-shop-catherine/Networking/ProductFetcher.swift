@@ -8,6 +8,9 @@
 import Foundation
 import SwiftUI
 
+// TODO: Call savePList(), saveBinary(), saveCoreData() in fetchProducts(). Must adjust local and class variables before I can call it within that function
+// TODO: Create a Protocol with these functions. Make class ProductFetcher and class ProductCoreData adhere to the Protocol
+
 class ProductFetcher: ObservableObject {
   
   enum APIError: Error {
@@ -46,8 +49,6 @@ class ProductFetcher: ObservableObject {
     }
     let productResponse = try JSONDecoder().decode([Product].self, from: data)
     // TODO: Write it to CoreData and return from CoreData
-    // TODO: Call savePList(), saveBinary(), saveCoreData() here. Must adjust local and class variables before I can call it here
-    // TODO: Create a Protocol that houses these classes. Make this class and CoreData class adhere to the Protocol
     return productResponse
     
   }
@@ -101,14 +102,19 @@ class ProductFetcher: ObservableObject {
     products.forEach { product in
       let productCoreData = ProductCoreData(context: PersistenceController.shared.container.viewContext)
       productCoreData.price = product.price
-      // TODO: Finish setting
+      productCoreData.productDescription = product.description
+      productCoreData.image = product.image
+      productCoreData.category = product.category
+      productCoreData.title = product.title
     }
     do {
       try PersistenceController.shared.container.viewContext.save()
     } catch {
-      print(error)
+      let nserror = error as NSError
+      fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
     }
-   // TODO: Read the context
+
+    // TODO: Read the context
   }
   
 }
