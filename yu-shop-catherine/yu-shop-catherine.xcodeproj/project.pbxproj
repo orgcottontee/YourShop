@@ -33,6 +33,8 @@
 		DEE5E09D28FB001B00C37562 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5E09C28FB001B00C37562 /* FileManager.swift */; };
 		DEE754EC28CAEF1D00055345 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE754EB28CAEF1D00055345 /* ProductListView.swift */; };
 		DEF1AC8428F3D66300122DC7 /* LoadingAPIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF1AC8328F3D66300122DC7 /* LoadingAPIImageView.swift */; };
+		DEF365FD28FCEDB80096F6D3 /* Products.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEF365FB28FCEDB80096F6D3 /* Products.xcdatamodeld */; };
+		DEF365FF28FCEE060096F6D3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF365FE28FCEE060096F6D3 /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		DEE754EB28CAEF1D00055345 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		DEEFC19728FACFB900614BBF /* Week08.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Week08.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		DEF1AC8328F3D66300122DC7 /* LoadingAPIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAPIImageView.swift; sourceTree = "<group>"; };
+		DEF365FC28FCEDB80096F6D3 /* Products.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Products.xcdatamodel; sourceTree = "<group>"; };
+		DEF365FE28FCEE060096F6D3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 				DE034B4228B074B7006289D2 /* Assets.xcassets */,
 				DE07A05D28EA41930028403F /* Playgrounds */,
 				DE034B4428B074B7006289D2 /* Preview Content */,
+				DEF365FB28FCEDB80096F6D3 /* Products.xcdatamodeld */,
 			);
 			path = "yu-shop-catherine";
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				DECE3CA428C632120061E59D /* Discounts.swift */,
 				DE488DB028D3FE9600228835 /* Category.swift */,
 				DE33BB6B28D6FEF70032B150 /* Bag.swift */,
+				DEF365FE28FCEE060096F6D3 /* Persistence.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -323,7 +329,9 @@
 				DEE5E09D28FB001B00C37562 /* FileManager.swift in Sources */,
 				DEE754EC28CAEF1D00055345 /* ProductListView.swift in Sources */,
 				DE5B5A3828D6ABF100F87EE6 /* TabBar.swift in Sources */,
+				DEF365FD28FCEDB80096F6D3 /* Products.xcdatamodeld in Sources */,
 				DE488DB128D3FE9600228835 /* Category.swift in Sources */,
+				DEF365FF28FCEE060096F6D3 /* Persistence.swift in Sources */,
 				DE33BB6828D6E0670032B150 /* OnboardingModalTextView.swift in Sources */,
 				DE034B3F28B074B4006289D2 /* yu_shop_catherineApp.swift in Sources */,
 				DEE59BF628B3AB930095CDFE /* Constants.swift in Sources */,
@@ -531,6 +539,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DEF365FB28FCEDB80096F6D3 /* Products.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DEF365FC28FCEDB80096F6D3 /* Products.xcdatamodel */,
+			);
+			currentVersion = DEF365FC28FCEDB80096F6D3 /* Products.xcdatamodel */;
+			path = Products.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DE034B3328B074B4006289D2 /* Project object */;
 }

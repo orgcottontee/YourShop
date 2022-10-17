@@ -11,7 +11,6 @@ struct HomeTabView: View {
   
   var body: some View {
     TabBar().environmentObject(Bag())
-    ProductListView().environmentObject(ProductFetcher())
   }
 }
 

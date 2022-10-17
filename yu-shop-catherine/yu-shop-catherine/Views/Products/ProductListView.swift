@@ -14,8 +14,8 @@ struct ProductListView: View {
     // 2. When do you use private var versus just var
     // 3. When do you initialize (productFetcher = ProductFetcher()) versus conform to (productFetcher: ProductFetcher)?
   
-  //@ObservedObject private var productFetcher = ProductFetcher()
-  @EnvironmentObject var productFetcher: ProductFetcher
+  @ObservedObject var productFetcher: ProductFetcher
+  //@EnvironmentObject var productFetcher: ProductFetcher
   var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
   
   var body: some View {

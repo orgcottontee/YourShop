@@ -19,18 +19,22 @@ class ProductFetcher: ObservableObject {
   @Published var products = [Product]() {
     didSet {
       savePList()
+      saveBinary()
     }
   }
   
   private let session: URLSession
   private let sessionConfiguration: URLSessionConfiguration
-  private let savePListURL = URL(fileURLWithPath: "PList Products",
+  private let savePListURL = URL(fileURLWithPath: "PListProductsData",
                                  relativeTo: FileManager.documentsDirectoryURL).appendingPathExtension("plist")
+  private let saveBinaryURL = FileManager.default.urls(for: .documentDirectory,
+                                                       in: .userDomainMask)[0].appendingPathComponent("BinaryProductsData.txt")
   
   init() {
     self.sessionConfiguration = URLSessionConfiguration.default
     self.session = URLSession(configuration: sessionConfiguration)
   }
+  
   
   func fetchProducts() async throws -> [Product] {
     guard let url = URL(string: "https://fakestoreapi.com/products") else {
@@ -50,6 +54,7 @@ class ProductFetcher: ObservableObject {
   private func savePList() {
     let encoder = PropertyListEncoder()
     encoder.outputFormat = .xml
+    print(savePListURL)
     
     do {
       let productsPListData = try encoder.encode(products)
@@ -58,7 +63,16 @@ class ProductFetcher: ObservableObject {
     } catch let error {
       print(error)
     }
-    
   }
   
+  private func saveBinary() {
+    
+  }
 }
+
+//    let saveBinaryURL = FileManager.default.urls(for: .documentDirectory,
+//                                        in: .userDomainMask)[0].appendingPathComponent("BinaryProductsData.txt")
+//    if let binaryProductsData = stringToSave.data(using: .utf8) {
+//        try? stringData.write(to: saveBinaryURL)
+//    }
+
