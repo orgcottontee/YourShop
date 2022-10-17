@@ -24,7 +24,7 @@ struct ProductListView: View {
           .padding()
         ScrollView {
           LazyVGrid(columns:columns, spacing: 20) {
-            ForEach(productFetcher.products, id: \.id) { product in
+            ForEach(products, id: \.id) { product in
               NavigationLink(destination: ProductDetailView(product: product)) {
                 ProductCard(product: product)
               }

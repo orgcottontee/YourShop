@@ -58,6 +58,7 @@ class ProductFetcher: ObservableObject {
       return
     }
     let encoder = PropertyListEncoder()
+    let decoder = PropertyListDecoder()
     encoder.outputFormat = .xml
     print(savePListURL)
     
@@ -67,6 +68,9 @@ class ProductFetcher: ObservableObject {
       }
       let productsPListData = try encoder.encode(products)
       try productsPListData.write(to: savePListURL, options: .atomicWrite)
+      let pListData = try Data(contentsOf: savePListURL)
+      let decodedProductFromPList = try decoder.decode([Product].self, from: pListData)
+      print(decodedProductFromPList)
       // TODO: Display Data - use property listdecoder
     } catch {
       print(error)
@@ -78,14 +82,16 @@ class ProductFetcher: ObservableObject {
       print("Unable to create Binary URL")
       return
     }
-    print(saveBinaryURL)
     do {
       if !FileManager.default.fileExists(atPath: customURL.path) {
         try FileManager.default.createDirectory(atPath: customURL.path, withIntermediateDirectories: true, attributes: nil)
       }
-      let data = try JSONEncoder().encode(products)
-      try data.write(to: saveBinaryURL)
-      // TODO: Display Data - Decode data from BinaryURL using JSONDecoder
+      let binaryData = try JSONEncoder().encode(products)
+      try binaryData.write(to: saveBinaryURL)
+      let decodedBinaryData = try JSONDecoder().decode([Product].self, from: binaryData)
+      print(decodedBinaryData)
+      
+      print(decodedBinaryData)
     } catch {
       print(error)
     }
