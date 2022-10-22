@@ -49,7 +49,6 @@ struct ProductListView: View {
       } catch {
         print(error.localizedDescription)
       }
-      productFetcher.saveCoreData()
     }
   }
 }

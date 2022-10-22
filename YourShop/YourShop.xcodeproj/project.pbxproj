@@ -28,13 +28,25 @@
 		DECE3CA528C632120061E59D /* Discounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECE3CA428C632120061E59D /* Discounts.swift */; };
 		DED83CBA28F23255005275D4 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83CB928F23255005275D4 /* SplashScreenView.swift */; };
 		DEE35B6429043F4800D5CD0F /* YourShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE034B3E28B074B4006289D2 /* YourShopApp.swift */; };
+		DEE35B6C2904434300D5CD0F /* YourShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE35B6B2904434300D5CD0F /* YourShopTests.swift */; };
+		DEE35B742904441F00D5CD0F /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = DEE35B732904441F00D5CD0F /* ViewInspector */; };
 		DEE59BF628B3AB930095CDFE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE59BF528B3AB930095CDFE /* Constants.swift */; };
 		DEE754EC28CAEF1D00055345 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE754EB28CAEF1D00055345 /* ProductListView.swift */; };
 		DEF1AC8428F3D66300122DC7 /* LoadingAPIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF1AC8328F3D66300122DC7 /* LoadingAPIImageView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DEE35B6D2904434300D5CD0F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE034B3328B074B4006289D2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE034B3A28B074B4006289D2;
+			remoteInfo = YourShop;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		DE034B3B28B074B4006289D2 /* Yu Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yu Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE034B3B28B074B4006289D2 /* YourShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE034B3E28B074B4006289D2 /* YourShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourShopApp.swift; sourceTree = "<group>"; };
 		DE034B4028B074B4006289D2 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		DE034B4228B074B7006289D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +69,8 @@
 		DECE3CA428C632120061E59D /* Discounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discounts.swift; sourceTree = "<group>"; };
 		DED5161628F38EFD00C1CB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DED83CB928F23255005275D4 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		DEE35B692904434300D5CD0F /* YourShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YourShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEE35B6B2904434300D5CD0F /* YourShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourShopTests.swift; sourceTree = "<group>"; };
 		DEE59BF528B3AB930095CDFE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DEE754EB28CAEF1D00055345 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		DEF1AC8328F3D66300122DC7 /* LoadingAPIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAPIImageView.swift; sourceTree = "<group>"; };
@@ -70,6 +84,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DEE35B662904434300D5CD0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEE35B742904441F00D5CD0F /* ViewInspector in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				DE034B3D28B074B4006289D2 /* YourShop */,
+				DEE35B6A2904434300D5CD0F /* YourShopTests */,
 				DE034B3C28B074B4006289D2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,7 +107,8 @@
 		DE034B3C28B074B4006289D2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DE034B3B28B074B4006289D2 /* Yu Shop.app */,
+				DE034B3B28B074B4006289D2 /* YourShop.app */,
+				DEE35B692904434300D5CD0F /* YourShopTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				DED5161628F38EFD00C1CB85 /* Info.plist */,
-				DE034B3E28B074B4006289D2 /* YourShopApp.swift */,
 				DEF1AC8228F3D64C00122DC7 /* Animations */,
 				DEEB219928BBFAAE00B401B1 /* Views */,
 				DEEB219828BBFA9800B401B1 /* Models */,
@@ -173,6 +196,14 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		DEE35B6A2904434300D5CD0F /* YourShopTests */ = {
+			isa = PBXGroup;
+			children = (
+				DEE35B6B2904434300D5CD0F /* YourShopTests.swift */,
+			);
+			path = YourShopTests;
+			sourceTree = "<group>";
+		};
 		DEEB219828BBFA9800B401B1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +219,7 @@
 		DEEB219928BBFAAE00B401B1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DE034B3E28B074B4006289D2 /* YourShopApp.swift */,
 				DE5B5A3728D6ABF100F87EE6 /* TabBar.swift */,
 				DE034B4028B074B4006289D2 /* HomeTabView.swift */,
 				DE33BB6628D6E0440032B150 /* OnboardingModal */,
@@ -226,8 +258,29 @@
 			);
 			name = YourShop;
 			productName = "yu-shop-catherine";
-			productReference = DE034B3B28B074B4006289D2 /* Yu Shop.app */;
+			productReference = DE034B3B28B074B4006289D2 /* YourShop.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DEE35B682904434300D5CD0F /* YourShopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEE35B6F2904434300D5CD0F /* Build configuration list for PBXNativeTarget "YourShopTests" */;
+			buildPhases = (
+				DEE35B652904434300D5CD0F /* Sources */,
+				DEE35B662904434300D5CD0F /* Frameworks */,
+				DEE35B672904434300D5CD0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEE35B6E2904434300D5CD0F /* PBXTargetDependency */,
+			);
+			name = YourShopTests;
+			packageProductDependencies = (
+				DEE35B732904441F00D5CD0F /* ViewInspector */,
+			);
+			productName = YourShopTests;
+			productReference = DEE35B692904434300D5CD0F /* YourShopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -242,6 +295,10 @@
 					DE034B3A28B074B4006289D2 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
+					DEE35B682904434300D5CD0F = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = DE034B3A28B074B4006289D2;
+					};
 				};
 			};
 			buildConfigurationList = DE034B3628B074B4006289D2 /* Build configuration list for PBXProject "YourShop" */;
@@ -254,13 +311,14 @@
 			);
 			mainGroup = DE034B3228B074B4006289D2;
 			packageReferences = (
-				DEE35B6129043B1900D5CD0F /* XCRemoteSwiftPackageReference "ViewInspector" */,
+				DEE35B722904441F00D5CD0F /* XCRemoteSwiftPackageReference "ViewInspector" */,
 			);
 			productRefGroup = DE034B3C28B074B4006289D2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				DE034B3A28B074B4006289D2 /* YourShop */,
+				DEE35B682904434300D5CD0F /* YourShopTests */,
 			);
 		};
 /* End PBXProject section */
@@ -272,6 +330,13 @@
 			files = (
 				DE034B4628B074B7006289D2 /* Preview Assets.xcassets in Resources */,
 				DE034B4328B074B7006289D2 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEE35B672904434300D5CD0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +372,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DEE35B652904434300D5CD0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEE35B6C2904434300D5CD0F /* YourShopTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DEE35B6E2904434300D5CD0F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE034B3A28B074B4006289D2 /* YourShop */;
+			targetProxy = DEE35B6D2904434300D5CD0F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		DE034B4728B074B7006289D2 /* Debug */ = {
@@ -447,7 +528,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yuyu.YourShop;
-				PRODUCT_NAME = "Yu Shop";
+				PRODUCT_NAME = YourShop;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -477,10 +558,48 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yuyu.YourShop;
-				PRODUCT_NAME = "Yu Shop";
+				PRODUCT_NAME = YourShop;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DEE35B702904434300D5CD0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yuyu.YourShopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yu Shop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Yu Shop";
+			};
+			name = Debug;
+		};
+		DEE35B712904434300D5CD0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = yuyu.YourShopTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yu Shop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Yu Shop";
 			};
 			name = Release;
 		};
@@ -505,10 +624,19 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		DEE35B6F2904434300D5CD0F /* Build configuration list for PBXNativeTarget "YourShopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEE35B702904434300D5CD0F /* Debug */,
+				DEE35B712904434300D5CD0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DEE35B6129043B1900D5CD0F /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+		DEE35B722904441F00D5CD0F /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/nalexn/ViewInspector";
 			requirement = {
@@ -517,6 +645,14 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DEE35B732904441F00D5CD0F /* ViewInspector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DEE35B722904441F00D5CD0F /* XCRemoteSwiftPackageReference "ViewInspector" */;
+			productName = ViewInspector;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DE034B3328B074B4006289D2 /* Project object */;
 }

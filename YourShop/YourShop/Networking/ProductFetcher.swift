@@ -23,7 +23,6 @@ class ProductFetcher: ObservableObject {
   
   private let session: URLSession
   private let sessionConfiguration: URLSessionConfiguration
-  private let customURL = FileManager.documentsDirectoryURL.appendingPathComponent("custom")
   
   init() {
     self.sessionConfiguration = URLSessionConfiguration.default
