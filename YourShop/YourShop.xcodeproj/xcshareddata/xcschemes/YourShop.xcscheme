@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DE034B3A28B074B4006289D2"
                BuildableName = "Yu Shop.app"
-               BlueprintName = "yu-shop-catherine"
-               ReferencedContainer = "container:yu-shop-catherine.xcodeproj">
+               BlueprintName = "YourShop"
+               ReferencedContainer = "container:YourShop.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,6 +28,17 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DEE35B5729043A7900D5CD0F"
+               BuildableName = "YuShopCatherineTests.xctest"
+               BlueprintName = "YuShopCatherineTests"
+               ReferencedContainer = "container:YourShop.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -46,8 +57,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DE034B3A28B074B4006289D2"
             BuildableName = "Yu Shop.app"
-            BlueprintName = "yu-shop-catherine"
-            ReferencedContainer = "container:yu-shop-catherine.xcodeproj">
+            BlueprintName = "YourShop"
+            ReferencedContainer = "container:YourShop.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,8 +74,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DE034B3A28B074B4006289D2"
             BuildableName = "Yu Shop.app"
-            BlueprintName = "yu-shop-catherine"
-            ReferencedContainer = "container:yu-shop-catherine.xcodeproj">
+            BlueprintName = "YourShop"
+            ReferencedContainer = "container:YourShop.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE034B3F28B074B4006289D2 /* yu_shop_catherineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE034B3E28B074B4006289D2 /* yu_shop_catherineApp.swift */; };
 		DE034B4128B074B4006289D2 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE034B4028B074B4006289D2 /* HomeTabView.swift */; };
 		DE034B4328B074B7006289D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE034B4228B074B7006289D2 /* Assets.xcassets */; };
 		DE034B4628B074B7006289D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE034B4528B074B7006289D2 /* Preview Assets.xcassets */; };
@@ -29,16 +28,16 @@
 		DEC954CD28FAB36F0046E58A /* ProductFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC954CC28FAB36F0046E58A /* ProductFetcher.swift */; };
 		DECE3CA528C632120061E59D /* Discounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECE3CA428C632120061E59D /* Discounts.swift */; };
 		DED83CBA28F23255005275D4 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83CB928F23255005275D4 /* SplashScreenView.swift */; };
+		DEE35B6429043F4800D5CD0F /* YourShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE034B3E28B074B4006289D2 /* YourShopApp.swift */; };
 		DEE59BF628B3AB930095CDFE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE59BF528B3AB930095CDFE /* Constants.swift */; };
 		DEE5E09D28FB001B00C37562 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE5E09C28FB001B00C37562 /* FileManager.swift */; };
 		DEE754EC28CAEF1D00055345 /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE754EB28CAEF1D00055345 /* ProductListView.swift */; };
 		DEF1AC8428F3D66300122DC7 /* LoadingAPIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF1AC8328F3D66300122DC7 /* LoadingAPIImageView.swift */; };
-		DEF365FD28FCEDB80096F6D3 /* Products.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DEF365FB28FCEDB80096F6D3 /* Products.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DE034B3B28B074B4006289D2 /* Yu Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yu Shop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE034B3E28B074B4006289D2 /* yu_shop_catherineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yu_shop_catherineApp.swift; sourceTree = "<group>"; };
+		DE034B3E28B074B4006289D2 /* YourShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourShopApp.swift; sourceTree = "<group>"; };
 		DE034B4028B074B4006289D2 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
 		DE034B4228B074B7006289D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE034B4528B074B7006289D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -65,7 +64,6 @@
 		DEE5E09C28FB001B00C37562 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		DEE754EB28CAEF1D00055345 /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		DEF1AC8328F3D66300122DC7 /* LoadingAPIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingAPIImageView.swift; sourceTree = "<group>"; };
-		DEF365FC28FCEDB80096F6D3 /* Products.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Products.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +80,7 @@
 		DE034B3228B074B4006289D2 = {
 			isa = PBXGroup;
 			children = (
-				DE034B3D28B074B4006289D2 /* yu-shop-catherine */,
+				DE034B3D28B074B4006289D2 /* YourShop */,
 				DE034B3C28B074B4006289D2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,20 +93,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DE034B3D28B074B4006289D2 /* yu-shop-catherine */ = {
+		DE034B3D28B074B4006289D2 /* YourShop */ = {
 			isa = PBXGroup;
 			children = (
 				DEE5E09B28FB000E00C37562 /* Extensions */,
 				DED5161628F38EFD00C1CB85 /* Info.plist */,
-				DE034B3E28B074B4006289D2 /* yu_shop_catherineApp.swift */,
+				DE034B3E28B074B4006289D2 /* YourShopApp.swift */,
 				DEEB219928BBFAAE00B401B1 /* Views */,
 				DEEB219828BBFA9800B401B1 /* Models */,
 				DEC954CB28FAB2A10046E58A /* Networking */,
 				DE034B4228B074B7006289D2 /* Assets.xcassets */,
 				DE034B4428B074B7006289D2 /* Preview Content */,
-				DEF365FB28FCEDB80096F6D3 /* Products.xcdatamodeld */,
 			);
-			path = "yu-shop-catherine";
+			path = YourShop;
 			sourceTree = "<group>";
 		};
 		DE034B4428B074B7006289D2 /* Preview Content */ = {
@@ -229,9 +226,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DE034B3A28B074B4006289D2 /* yu-shop-catherine */ = {
+		DE034B3A28B074B4006289D2 /* YourShop */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE034B4928B074B7006289D2 /* Build configuration list for PBXNativeTarget "yu-shop-catherine" */;
+			buildConfigurationList = DE034B4928B074B7006289D2 /* Build configuration list for PBXNativeTarget "YourShop" */;
 			buildPhases = (
 				DE034B3728B074B4006289D2 /* Sources */,
 				DE034B3828B074B4006289D2 /* Frameworks */,
@@ -241,7 +238,7 @@
 			);
 			dependencies = (
 			);
-			name = "yu-shop-catherine";
+			name = YourShop;
 			productName = "yu-shop-catherine";
 			productReference = DE034B3B28B074B4006289D2 /* Yu Shop.app */;
 			productType = "com.apple.product-type.application";
@@ -253,7 +250,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					DE034B3A28B074B4006289D2 = {
@@ -261,7 +258,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DE034B3628B074B4006289D2 /* Build configuration list for PBXProject "yu-shop-catherine" */;
+			buildConfigurationList = DE034B3628B074B4006289D2 /* Build configuration list for PBXProject "YourShop" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -270,11 +267,14 @@
 				Base,
 			);
 			mainGroup = DE034B3228B074B4006289D2;
+			packageReferences = (
+				DEE35B6129043B1900D5CD0F /* XCRemoteSwiftPackageReference "ViewInspector" */,
+			);
 			productRefGroup = DE034B3C28B074B4006289D2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DE034B3A28B074B4006289D2 /* yu-shop-catherine */,
+				DE034B3A28B074B4006289D2 /* YourShop */,
 			);
 		};
 /* End PBXProject section */
@@ -302,6 +302,7 @@
 				DE33BB6F28D7063D0032B150 /* CategoryCard.swift in Sources */,
 				DECE3CA528C632120061E59D /* Discounts.swift in Sources */,
 				DE034B4128B074B4006289D2 /* HomeTabView.swift in Sources */,
+				DEE35B6429043F4800D5CD0F /* YourShopApp.swift in Sources */,
 				DE7AB20228D2666C002C4FC7 /* ProfileView.swift in Sources */,
 				DEF1AC8428F3D66300122DC7 /* LoadingAPIImageView.swift in Sources */,
 				DED83CBA28F23255005275D4 /* SplashScreenView.swift in Sources */,
@@ -314,10 +315,8 @@
 				DEE5E09D28FB001B00C37562 /* FileManager.swift in Sources */,
 				DEE754EC28CAEF1D00055345 /* ProductListView.swift in Sources */,
 				DE5B5A3828D6ABF100F87EE6 /* TabBar.swift in Sources */,
-				DEF365FD28FCEDB80096F6D3 /* Products.xcdatamodeld in Sources */,
 				DE488DB128D3FE9600228835 /* Category.swift in Sources */,
 				DE33BB6828D6E0670032B150 /* OnboardingModalTextView.swift in Sources */,
-				DE034B3F28B074B4006289D2 /* yu_shop_catherineApp.swift in Sources */,
 				DEE59BF628B3AB930095CDFE /* Constants.swift in Sources */,
 				DE43C40C28DD76400069C214 /* ProductCard.swift in Sources */,
 				DE38425328BBE93400CF4D7F /* Product.swift in Sources */,
@@ -448,11 +447,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"yu-shop-catherine/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"YourShop/Preview Content\"";
 				DEVELOPMENT_TEAM = G4B5B4UZY6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "yu-shop-catherine/Info.plist";
+				INFOPLIST_FILE = YourShop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -463,7 +462,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "yuyu.yu-shop-catherine";
+				PRODUCT_BUNDLE_IDENTIFIER = yuyu.YourShop;
 				PRODUCT_NAME = "Yu Shop";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -478,11 +477,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"yu-shop-catherine/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"YourShop/Preview Content\"";
 				DEVELOPMENT_TEAM = G4B5B4UZY6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "yu-shop-catherine/Info.plist";
+				INFOPLIST_FILE = YourShop/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -493,7 +492,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "yuyu.yu-shop-catherine";
+				PRODUCT_BUNDLE_IDENTIFIER = yuyu.YourShop;
 				PRODUCT_NAME = "Yu Shop";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -504,7 +503,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DE034B3628B074B4006289D2 /* Build configuration list for PBXProject "yu-shop-catherine" */ = {
+		DE034B3628B074B4006289D2 /* Build configuration list for PBXProject "YourShop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE034B4728B074B7006289D2 /* Debug */,
@@ -513,7 +512,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE034B4928B074B7006289D2 /* Build configuration list for PBXNativeTarget "yu-shop-catherine" */ = {
+		DE034B4928B074B7006289D2 /* Build configuration list for PBXNativeTarget "YourShop" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DE034B4A28B074B7006289D2 /* Debug */,
@@ -524,18 +523,16 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCVersionGroup section */
-		DEF365FB28FCEDB80096F6D3 /* Products.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				DEF365FC28FCEDB80096F6D3 /* Products.xcdatamodel */,
-			);
-			currentVersion = DEF365FC28FCEDB80096F6D3 /* Products.xcdatamodel */;
-			path = Products.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+/* Begin XCRemoteSwiftPackageReference section */
+		DEE35B6129043B1900D5CD0F /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = exactVersion;
+				version = 0.9.1;
+			};
 		};
-/* End XCVersionGroup section */
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = DE034B3328B074B4006289D2 /* Project object */;
 }

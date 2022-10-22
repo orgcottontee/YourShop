@@ -23,7 +23,6 @@ class ProductFetcher: ObservableObject {
     didSet {
       savePList()
       saveBinary()
-      saveCoreData()
     }
   }
   
@@ -97,24 +96,4 @@ class ProductFetcher: ObservableObject {
       print(error)
     }
   }
-  
-  func saveCoreData() {
-    products.forEach { product in
-      let productCoreData = Products(context: PersistenceController.shared.container.viewContext)
-      productCoreData.price = product.price
-      productCoreData.productDescription = product.description
-      productCoreData.image = product.image
-      productCoreData.category = product.category
-      productCoreData.title = product.title
-    }
-    do {
-      try PersistenceController.shared.container.viewContext.save()
-    } catch {
-      let nserror = error as NSError
-      fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-    }
-
-    // TODO: Read the context
-  }
-  
 }
