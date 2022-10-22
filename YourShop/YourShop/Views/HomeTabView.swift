@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  yu-shop-catherine
+//  YourShop
 //
 //  Created by adobada on 8/19/22.
 //

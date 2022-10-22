@@ -1,6 +1,6 @@
 //
 //  ProductFetcher.swift
-//  yu-shop-catherine
+//  YourShop
 //
 //  Created by adobada on 10/15/22.
 //
@@ -19,12 +19,7 @@ class ProductFetcher: ObservableObject {
     case urlCreationFailed
   }
   
-  private var products = [Product]() {
-    didSet {
-      savePList()
-      saveBinary()
-    }
-  }
+  private var products = [Product]()
   
   private let session: URLSession
   private let sessionConfiguration: URLSessionConfiguration
@@ -50,50 +45,5 @@ class ProductFetcher: ObservableObject {
     // TODO: Write it to CoreData and return from CoreData
     return productResponse
     
-  }
-  
-  private func savePList() {
-    guard let savePListURL = URL(string: "PListProductsData", relativeTo: customURL)?.appendingPathExtension("plist") else {
-      print("Unable to create PList URL")
-      return
-    }
-    let encoder = PropertyListEncoder()
-    let decoder = PropertyListDecoder()
-    encoder.outputFormat = .xml
-    print(savePListURL)
-    
-    do {
-      if !FileManager.default.fileExists(atPath: customURL.path) {
-        try FileManager.default.createDirectory(atPath: customURL.path, withIntermediateDirectories: true, attributes: nil)
-      }
-      let productsPListData = try encoder.encode(products)
-      try productsPListData.write(to: savePListURL, options: .atomicWrite)
-      let pListData = try Data(contentsOf: savePListURL)
-      let decodedProductFromPList = try decoder.decode([Product].self, from: pListData)
-      print(decodedProductFromPList)
-      // TODO: Display Data - use property listdecoder
-    } catch {
-      print(error)
-    }
-  }
-  
-  private func saveBinary() {
-    guard let saveBinaryURL = URL(string: "BinaryProductsData", relativeTo: customURL) else {
-      print("Unable to create Binary URL")
-      return
-    }
-    do {
-      if !FileManager.default.fileExists(atPath: customURL.path) {
-        try FileManager.default.createDirectory(atPath: customURL.path, withIntermediateDirectories: true, attributes: nil)
-      }
-      let binaryData = try JSONEncoder().encode(products)
-      try binaryData.write(to: saveBinaryURL)
-      let decodedBinaryData = try JSONDecoder().decode([Product].self, from: binaryData)
-      print(decodedBinaryData)
-      
-      print(decodedBinaryData)
-    } catch {
-      print(error)
-    }
   }
 }

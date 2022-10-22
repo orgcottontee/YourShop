@@ -1,6 +1,6 @@
 //
 //  TabView.swift
-//  yu-shop-catherine
+//  YourShop
 //
 //  Created by adobada on 9/17/22.
 //
