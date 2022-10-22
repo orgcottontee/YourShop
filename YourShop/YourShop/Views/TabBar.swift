@@ -15,48 +15,55 @@ struct TabBar: View {
     
     TabView {
       NavigationView {
-        CategoryView(categories: Category.sampleCategory)
-      }
-      .tabItem {
-        Label("Categories", systemImage: "rectangle.3.group")
-      }
-      .tag(0)
-      
-      NavigationView {
         ProductListView(productFetcher: ProductFetcher())
       }
       .tabItem {
         Label("Browse", systemImage: "magnifyingglass")
       }
-      .tag(1)
-      
-      NavigationView {
-        WelcomeView()
-      }
-      .tabItem {
-        Label("Home", systemImage: "house")
-      }
-      .tag(2)
-      
-      NavigationView {
-        ProfileView()
-      }
-      .tabItem {
-        Label("Profile", systemImage: "tshirt")
-      }
-      .tag(3)
-      
-      NavigationView {
-        CartView()
-      }
-      .badge(bag.products.count)
-      .tabItem {
-        Label("Bag", systemImage: "bag")
-      }
-      .tag(4)
+      .tag(0)
+      WelcomeView()
     }
-    .accentColor(Color("TextColor"))
+    .tabItem {
+      Label("Home", systemImage: "house")
+    }
+    .tag(1)
+    
   }
+  //      NavigationView {
+  //        ProductListView(productFetcher: ProductFetcher())
+  //      }
+  //      .tabItem {
+  //        Label("Browse", systemImage: "magnifyingglass")
+  //      }
+  //      .tag(1)
+  //
+  //      NavigationView {
+  //        WelcomeView()
+  //      }
+  //      .tabItem {
+  //        Label("Home", systemImage: "house")
+  //      }
+  //      .tag(2)
+  //
+  //      NavigationView {
+  //        ProfileView()
+  //      }
+  //      .tabItem {
+  //        Label("Profile", systemImage: "tshirt")
+  //      }
+  //      .tag(3)
+  //
+  //      NavigationView {
+  //        CartView()
+  //      }
+  //      .badge(bag.products.count)
+  //      .tabItem {
+  //        Label("Bag", systemImage: "bag")
+  //      }
+  //      .tag(4)
+  //    }
+  //    .accentColor(Color("TextColor"))
+  //  }
 }
 
 struct TabView_Previews: PreviewProvider {

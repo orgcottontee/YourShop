@@ -10,7 +10,6 @@ import CoreData
 
 struct ProductListView: View {
 
-  @Environment(\.managedObjectContext) var viewContext
   @ObservedObject var productFetcher = ProductFetcher()
   @State var products: [Product] = []
   var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
