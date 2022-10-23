@@ -18,7 +18,7 @@ struct ProductDetailView: View {
       Text(product.title)
         .kerning(4)
         .multilineTextAlignment(.center)
-        .font(.title)
+        .font(.subheadline)
         .padding()
       AsyncImage(url: URL(string: product.image)) { image in
         image.resizable()
@@ -30,6 +30,7 @@ struct ProductDetailView: View {
       
       Text(product.description)
         .kerning(2)
+        .font(.caption)
         .padding()
       
       HStack {
@@ -44,11 +45,6 @@ struct ProductDetailView: View {
           bag.addToBag(product: product)
         } label: {
           Image(systemName: "plus")
-            .font(.headline)
-            .padding()
-            .foregroundColor(.white)
-            .background(.black)
-            .cornerRadius(50)
         }
       }
     }
