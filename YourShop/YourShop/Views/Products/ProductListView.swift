@@ -9,31 +9,28 @@ import SwiftUI
 import CoreData
 
 struct ProductListView: View {
-
+  
   @ObservedObject var productFetcher = ProductFetcher()
   @State var products: [Product] = []
   var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
-
-
+  
+  
   var body: some View {
-
-    ZStack {
-      Color("BackgroundColor").edgesIgnoringSafeArea(.all)
-      VStack(alignment: .leading) {
-        Text("Products")
-          .kerning(4)
-          .font(.largeTitle.bold())
-          .padding()
-        ScrollView {
-          LazyVGrid(columns:columns, spacing: 20) {
-            ForEach(products, id: \.id) { product in
-              NavigationLink(destination: ProductDetailView(product: product)) {
-                ProductCard(product: product)
-              }
+    
+    VStack(alignment: .leading) {
+      Text("Products")
+        .kerning(4)
+        .font(.largeTitle.bold())
+        .padding()
+      ScrollView {
+        LazyVGrid(columns:columns, spacing: 20) {
+          ForEach(products, id: \.id) { product in
+            NavigationLink(destination: ProductDetailView(product: product)) {
+              ProductCard(product: product)
             }
           }
-          .padding()
         }
+        .padding()
       }
     }
     .task {

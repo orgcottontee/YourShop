@@ -12,11 +12,12 @@ struct SplashScreenView: View {
   @State private var isActive = false
   @State private var size = 0.1
   @State private var opacity  = 0.4
+  // TODO: Animate a hanger from top and a tshirt from bottom to meet in the middle
   
   var body: some View {
     
     if isActive {
-      HomeTabView()
+      MainView()
     } else {
       VStack {
         VStack {

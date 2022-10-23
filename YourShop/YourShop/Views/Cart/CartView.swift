@@ -14,27 +14,28 @@ struct CartView: View {
   var body: some View {
     
     NavigationView {
-      ZStack {
-        Color("BackgroundColor").edgesIgnoringSafeArea(.all)
-        List {
-          ForEach(bag.products) { product in
-            HStack(alignment: .center) {
-              Text(product.title)
-                .font(.title)
-                .bold()
-                .padding()
-              
-              Spacer()
-              
-              Text(String(product.price))
-                .font(.headline)
-                .bold()
-                .padding()
-            }
+      List {
+        ForEach(bag.products) { product in
+          HStack(alignment: .center) {
+            Text(product.title)
+            
+            Spacer()
+            
+            Text("$\(product.price)")
+              .font(.headline)
+              .bold()
+              .padding()
           }
-          .navigationTitle("Your Shopping bag")
+        }
+        Section {
+          NavigationLink(destination:
+                          Text("Check out")) {
+            Text("Place Order")
+          }
         }
       }
+      .navigationTitle("Your Shopping Bag")
+      .listStyle(InsetGroupedListStyle())
     }
   }
 }

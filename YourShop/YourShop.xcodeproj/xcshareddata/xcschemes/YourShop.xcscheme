@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DE034B3A28B074B4006289D2"
-               BuildableName = "Yu Shop.app"
+               BuildableName = "YourShop.app"
                BlueprintName = "YourShop"
                ReferencedContainer = "container:YourShop.xcodeproj">
             </BuildableReference>
@@ -67,7 +67,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DE034B3A28B074B4006289D2"
-            BuildableName = "Yu Shop.app"
+            BuildableName = "YourShop.app"
             BlueprintName = "YourShop"
             ReferencedContainer = "container:YourShop.xcodeproj">
          </BuildableReference>
@@ -84,7 +84,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DE034B3A28B074B4006289D2"
-            BuildableName = "Yu Shop.app"
+            BuildableName = "YourShop.app"
             BlueprintName = "YourShop"
             ReferencedContainer = "container:YourShop.xcodeproj">
          </BuildableReference>

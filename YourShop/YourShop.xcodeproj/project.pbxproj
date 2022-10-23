@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DE034B4128B074B4006289D2 /* HomeTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE034B4028B074B4006289D2 /* HomeTabView.swift */; };
+		DE034B4128B074B4006289D2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE034B4028B074B4006289D2 /* MainView.swift */; };
 		DE034B4328B074B7006289D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE034B4228B074B7006289D2 /* Assets.xcassets */; };
 		DE034B4628B074B7006289D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE034B4528B074B7006289D2 /* Preview Assets.xcassets */; };
 		DE33BB6828D6E0670032B150 /* OnboardingModalTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE33BB6728D6E0670032B150 /* OnboardingModalTextView.swift */; };
@@ -21,6 +21,7 @@
 		DE7AB1FE28D263CE002C4FC7 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7AB1FD28D263CE002C4FC7 /* CartView.swift */; };
 		DE7AB20228D2666C002C4FC7 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7AB20128D2666C002C4FC7 /* ProfileView.swift */; };
 		DE7AB20428D2A86A002C4FC7 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7AB20328D2A86A002C4FC7 /* WelcomeView.swift */; };
+		DE9FD9B229050D6300EC5D10 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9FD9B129050D6300EC5D10 /* products.json */; };
 		DEC954CD28FAB36F0046E58A /* ProductFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC954CC28FAB36F0046E58A /* ProductFetcher.swift */; };
 		DECE3CA528C632120061E59D /* Discounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECE3CA428C632120061E59D /* Discounts.swift */; };
 		DED83CBA28F23255005275D4 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83CB928F23255005275D4 /* SplashScreenView.swift */; };
@@ -45,7 +46,7 @@
 /* Begin PBXFileReference section */
 		DE034B3B28B074B4006289D2 /* YourShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YourShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE034B3E28B074B4006289D2 /* YourShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourShopApp.swift; sourceTree = "<group>"; };
-		DE034B4028B074B4006289D2 /* HomeTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabView.swift; sourceTree = "<group>"; };
+		DE034B4028B074B4006289D2 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DE034B4228B074B7006289D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE034B4528B074B7006289D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DE33BB6728D6E0670032B150 /* OnboardingModalTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModalTextView.swift; sourceTree = "<group>"; };
@@ -59,6 +60,7 @@
 		DE7AB1FD28D263CE002C4FC7 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		DE7AB20128D2666C002C4FC7 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		DE7AB20328D2A86A002C4FC7 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		DE9FD9B129050D6300EC5D10 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = products.json; path = ../../../../Downloads/products.json; sourceTree = "<group>"; };
 		DEC954CC28FAB36F0046E58A /* ProductFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFetcher.swift; sourceTree = "<group>"; };
 		DECE3CA428C632120061E59D /* Discounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discounts.swift; sourceTree = "<group>"; };
 		DED5161628F38EFD00C1CB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -110,9 +112,9 @@
 		DE034B3D28B074B4006289D2 /* YourShop */ = {
 			isa = PBXGroup;
 			children = (
+				DE9FD9B129050D6300EC5D10 /* products.json */,
 				DE034B4228B074B7006289D2 /* Assets.xcassets */,
 				DED5161628F38EFD00C1CB85 /* Info.plist */,
-				DEF1AC8228F3D64C00122DC7 /* Animations */,
 				DEEB219928BBFAAE00B401B1 /* Views */,
 				DEEB219828BBFA9800B401B1 /* Models */,
 				DEC954CB28FAB2A10046E58A /* Networking */,
@@ -205,7 +207,8 @@
 			children = (
 				DE034B3E28B074B4006289D2 /* YourShopApp.swift */,
 				DE5B5A3728D6ABF100F87EE6 /* TabBar.swift */,
-				DE034B4028B074B4006289D2 /* HomeTabView.swift */,
+				DE034B4028B074B4006289D2 /* MainView.swift */,
+				DEF1AC8228F3D64C00122DC7 /* Animations */,
 				DE33BB6628D6E0440032B150 /* OnboardingModal */,
 				DE488DAF28D3FD1000228835 /* Welcome */,
 				DE7AB20728D2AD71002C4FC7 /* Products */,
@@ -311,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE9FD9B229050D6300EC5D10 /* products.json in Resources */,
 				DE034B4628B074B7006289D2 /* Preview Assets.xcassets in Resources */,
 				DE034B4328B074B7006289D2 /* Assets.xcassets in Resources */,
 			);
@@ -334,7 +338,7 @@
 				DE5B5A3A28D6CDF600F87EE6 /* ProductDetailView.swift in Sources */,
 				DE7AB1FE28D263CE002C4FC7 /* CartView.swift in Sources */,
 				DECE3CA528C632120061E59D /* Discounts.swift in Sources */,
-				DE034B4128B074B4006289D2 /* HomeTabView.swift in Sources */,
+				DE034B4128B074B4006289D2 /* MainView.swift in Sources */,
 				DEE35B6429043F4800D5CD0F /* YourShopApp.swift in Sources */,
 				DE7AB20228D2666C002C4FC7 /* ProfileView.swift in Sources */,
 				DEF1AC8428F3D66300122DC7 /* LoadingAPIImageView.swift in Sources */,
