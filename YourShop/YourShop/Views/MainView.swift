@@ -21,10 +21,6 @@ struct MainView: View {
         .tabItem {
           Label("Welcome", systemImage: "house")
         }
-      ProfileView()
-        .tabItem {
-          Label("Profile", systemImage: "tshirt")
-        }
       BagView()
         .badge(bag.products.count)
         .tabItem {
