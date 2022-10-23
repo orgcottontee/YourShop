@@ -21,7 +21,7 @@ struct BagView: View {
             
             Spacer()
             
-            Text("$\(product.price)")
+            Text("$\(product.price, specifier: "%.2f")")
               .font(.headline)
               .bold()
               .padding()

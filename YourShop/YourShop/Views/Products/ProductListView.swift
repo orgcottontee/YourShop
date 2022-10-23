@@ -10,7 +10,6 @@ import CoreData
 
 struct ProductListView: View {
   
-  @StateObject var bag = Bag()
   @ObservedObject var productFetcher = ProductFetcher()
   @State var products: [Product] = []
   var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
@@ -18,11 +17,7 @@ struct ProductListView: View {
   
   var body: some View {
     
-    VStack(alignment: .leading) {
-      Text("Products")
-        .kerning(4)
-        .font(.largeTitle.bold())
-        .padding()
+    NavigationView {
       ScrollView {
         LazyVGrid(columns: columns, spacing: 20) {
           ForEach(products, id: \.id) { product in
@@ -33,18 +28,19 @@ struct ProductListView: View {
         }
         .padding()
       }
-    }
-    .task {
-      do {
-        products = try await productFetcher.fetchProducts()
-      } catch ProductFetcher.APIError.requestFailed {
-        print("Your request failed")
-      } catch ProductFetcher.APIError.responseDecodingFailed {
-        print("Failed response")
-      } catch ProductFetcher.APIError.urlCreationFailed {
-        print("Invalid URL")
-      } catch {
-        print(error.localizedDescription)
+      .navigationTitle("Products")
+      .task {
+        do {
+          products = try await productFetcher.fetchProducts()
+        } catch ProductFetcher.APIError.requestFailed {
+          print("Your request failed")
+        } catch ProductFetcher.APIError.responseDecodingFailed {
+          print("Failed response")
+        } catch ProductFetcher.APIError.urlCreationFailed {
+          print("Invalid URL")
+        } catch {
+          print(error.localizedDescription)
+        }
       }
     }
   }
