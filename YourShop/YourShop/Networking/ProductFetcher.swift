@@ -11,6 +11,7 @@ import SwiftUI
 // TODO: Call savePList(), saveBinary(), saveCoreData() in fetchProducts(). Must adjust local and class variables before I can call it within that function
 // TODO: Create a Protocol with these functions. Make class ProductFetcher and class ProductCoreData adhere to the Protocol
 
+
 class ProductFetcher: ObservableObject {
   
   enum APIError: Error {
@@ -41,8 +42,9 @@ class ProductFetcher: ObservableObject {
       throw APIError.requestFailed
     }
     let productResponse = try JSONDecoder().decode([Product].self, from: data)
-    // TODO: Write it to CoreData and return from CoreData
     return productResponse
     
   }
 }
+
+

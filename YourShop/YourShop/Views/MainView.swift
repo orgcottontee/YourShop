@@ -30,7 +30,7 @@ struct MainView: View {
         .tabItem {
           Label("Bag", systemImage: "bag")
         }
-    }
+    }    
   }
 }
 

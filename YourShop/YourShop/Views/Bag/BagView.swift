@@ -34,7 +34,7 @@ struct BagView: View {
           }
         }
       }
-      .navigationTitle("Your Shopping Bag")
+      .navigationTitle("My Shopping Bag")
       .listStyle(InsetGroupedListStyle())
     }
   }

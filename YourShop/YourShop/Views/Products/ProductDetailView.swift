@@ -27,7 +27,6 @@ struct ProductDetailView: View {
         LoadingAPIImageView()
       }
       .frame(width: 180, height: 180)
-      .padding()
       
       Text(product.description)
         .kerning(2)
@@ -39,6 +38,7 @@ struct ProductDetailView: View {
           .font(.title2)
           .multilineTextAlignment(.center)
           .padding()
+        
         Button {
           print("You've added \(product.title) to your bag!")
           bag.addToBag(product: product)
@@ -51,7 +51,6 @@ struct ProductDetailView: View {
             .cornerRadius(50)
         }
       }
-      .padding()
     }
   }
 }
@@ -60,5 +59,6 @@ struct ProductDetailView_Previews: PreviewProvider {
   static var previews: some View {
     ProductDetailView(product: Product.example)
       .environmentObject(Bag())
+    
   }
 }
