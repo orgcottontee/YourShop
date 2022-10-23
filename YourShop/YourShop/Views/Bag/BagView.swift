@@ -10,39 +10,42 @@ import SwiftUI
 struct BagView: View {
   
   @EnvironmentObject var bag: Bag
+  var products: Product
   
   var body: some View {
     
     NavigationView {
-      List {
-        ForEach(bag.products) { product in
-          HStack(alignment: .center) {
-            Text(product.title)
-            
-            Spacer()
-            
-            Text("$\(product.price, specifier: "%.2f")")
-              .font(.headline)
-              .bold()
-              .padding()
+      ScrollView {
+        if bag.products.count > 0 {
+          ForEach(bag.products, id: \.id) { product in
+            BagListView(product: product)
           }
-        }
-        Section {
-          NavigationLink(destination:
-                          Text("Check out")) {
-            Text("Place Order")
+          VStack {
+            HStack {
+              Text("Your cart total is")
+              Spacer()
+              Text("$\(bag.total, specifier: "%.2f")")
+      
+                .bold()
+            }
+            .padding()
           }
+          Spacer()
+        } else {
+          Text("Your bag is empty!")
+            .kerning(5)
+            .font(.title)
         }
       }
-      .navigationTitle("My Shopping Bag")
-      .listStyle(InsetGroupedListStyle())
+      .padding(.top)
+      .navigationTitle("My Shopping Cart")
     }
   }
 }
 
 struct Cart_Previews: PreviewProvider {
   static var previews: some View {
-    BagView()
+    BagView(products: Product.example)
       .environmentObject(Bag())
   }
 }
