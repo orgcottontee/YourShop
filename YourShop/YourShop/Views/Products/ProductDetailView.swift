@@ -11,7 +11,7 @@ struct ProductDetailView: View {
   
   @EnvironmentObject var bag: Bag
   var product: Product
-  
+   
   var body: some View {
     
     VStack {
