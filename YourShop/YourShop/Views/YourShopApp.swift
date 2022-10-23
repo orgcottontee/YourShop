@@ -10,9 +10,12 @@ import SwiftUI
 @main
 struct YourShopApp: App {
   
+  @StateObject var bag = Bag()
+  
   var body: some Scene {
     WindowGroup {
       SplashScreenView()
+        .environmentObject(bag)
     }
   }
 }

@@ -8,6 +8,7 @@
 import Foundation
 
 class Bag: ObservableObject {
+  
   @Published var products = [Product]()
   @Published var total: Double = 0
   

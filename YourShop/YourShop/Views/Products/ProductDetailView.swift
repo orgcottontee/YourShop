@@ -15,44 +15,41 @@ struct ProductDetailView: View {
   var body: some View {
     
     VStack {
+      Text(product.title)
+        .kerning(4)
+        .multilineTextAlignment(.center)
+        .font(.title)
+        .padding()
       AsyncImage(url: URL(string: product.image)) { image in
         image.resizable()
           .scaledToFit()
-          //.shadow(color: .gray, radius: 20, x: 2, y: 2)
-          
       } placeholder: {
         LoadingAPIImageView()
       }
       .frame(width: 180, height: 180)
+      .padding()
       
-      Button {
-        print("You've added \(product.title) to your bag!")
-        bag.addToBag(product: product)
-      } label: {
-        Image(systemName: "plus")
-          .font(.headline)
-          .padding()
-          .foregroundColor(.white)
-          .background(.black)
-          .cornerRadius(50)
-      }
-      VStack(alignment: .center) {
-        Text(product.title)
-          .font(.headline)
-          .foregroundColor( .init(white: 0.4) )
-          .padding(10)
-          .background( Color(white: 0.9) )
-          .cornerRadius(2)
-          .padding(.bottom)
-        
-        Text(product.description)
-          .multilineTextAlignment(.center)
-          .padding(.bottom)
-        
+      Text(product.description)
+        .kerning(2)
+        .padding()
+      
+      HStack {
         Text("$ \(String(format: "%.1f", product.price))")
+          .kerning(2)
           .font(.title2)
           .multilineTextAlignment(.center)
           .padding()
+        Button {
+          print("You've added \(product.title) to your bag!")
+          bag.addToBag(product: product)
+        } label: {
+          Image(systemName: "plus")
+            .font(.headline)
+            .padding()
+            .foregroundColor(.white)
+            .background(.black)
+            .cornerRadius(50)
+        }
       }
       .padding()
     }

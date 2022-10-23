@@ -10,6 +10,7 @@ import CoreData
 
 struct ProductListView: View {
   
+  @StateObject var bag = Bag()
   @ObservedObject var productFetcher = ProductFetcher()
   @State var products: [Product] = []
   var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
@@ -23,7 +24,7 @@ struct ProductListView: View {
         .font(.largeTitle.bold())
         .padding()
       ScrollView {
-        LazyVGrid(columns:columns, spacing: 20) {
+        LazyVGrid(columns: columns, spacing: 20) {
           ForEach(products, id: \.id) { product in
             NavigationLink(destination: ProductDetailView(product: product)) {
               ProductCard(product: product)
@@ -49,11 +50,8 @@ struct ProductListView: View {
   }
 }
 
-//struct ProductsView_Previews: PreviewProvider {
-//  static var previews: some View {
-//    let context = PersistenceController.preview.container.viewContext
-//    let newProducts = ProductCoreData(context: context)
-//    newProducts.title = "Cool Product!"
-//    ProductListView()
-//  }
-//}
+struct ProductsView_Previews: PreviewProvider {
+  static var previews: some View {
+    ProductListView()
+  }
+}
