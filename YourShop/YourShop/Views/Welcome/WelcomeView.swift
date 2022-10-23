@@ -25,7 +25,6 @@ struct WelcomeView: View {
         Spacer()
         
         WelcomeText(text: Constants.title.homeTitle)
-        UserName(text: "Theo")
         Button(action: {
           showOnboardingModal.toggle()
         }) {
@@ -33,7 +32,6 @@ struct WelcomeView: View {
             .foregroundColor(Color("TextColor"))
             .font(.system(size: Constants.SfSymbols.size, weight: .ultraLight))
         }
-        .padding()
         .sheet(isPresented: $showOnboardingModal) {
           OnboardingModalView()
         }
