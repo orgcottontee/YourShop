@@ -26,14 +26,15 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO"
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DEE35B682904434300D5CD0F"
+               BlueprintIdentifier = "DEE8A858290634DC008F5B14"
                BuildableName = "YourShopTests.xctest"
                BlueprintName = "YourShopTests"
                ReferencedContainer = "container:YourShop.xcodeproj">
@@ -44,7 +45,7 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DE7D2CC429053DFA005E8DBE"
+               BlueprintIdentifier = "DEDF14AA290580DD005046E7"
                BuildableName = "YourShopUITests.xctest"
                BlueprintName = "YourShopUITests"
                ReferencedContainer = "container:YourShop.xcodeproj">
