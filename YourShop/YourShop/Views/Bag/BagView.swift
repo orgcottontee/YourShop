@@ -10,7 +10,7 @@ import SwiftUI
 struct BagView: View {
   
   @EnvironmentObject var bag: Bag
-  var products: Product
+  // var products: Product
   
   var body: some View {
     
@@ -45,7 +45,7 @@ struct BagView: View {
 
 struct Cart_Previews: PreviewProvider {
   static var previews: some View {
-    BagView(products: Product.example)
+    BagView()
       .environmentObject(Bag())
   }
 }
