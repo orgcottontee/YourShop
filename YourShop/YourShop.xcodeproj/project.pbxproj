@@ -20,7 +20,6 @@
 		DE7AB1FE28D263CE002C4FC7 /* BagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7AB1FD28D263CE002C4FC7 /* BagView.swift */; };
 		DE7AB20428D2A86A002C4FC7 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7AB20328D2A86A002C4FC7 /* WelcomeView.swift */; };
 		DE839B2F29056256009B0340 /* BagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE839B2E29056256009B0340 /* BagListView.swift */; };
-		DE9FD9B229050D6300EC5D10 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = DE9FD9B129050D6300EC5D10 /* products.json */; };
 		DEC954CD28FAB36F0046E58A /* ProductFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC954CC28FAB36F0046E58A /* ProductFetcher.swift */; };
 		DECE3CA528C632120061E59D /* Discounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECE3CA428C632120061E59D /* Discounts.swift */; };
 		DED83CBA28F23255005275D4 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED83CB928F23255005275D4 /* SplashScreenView.swift */; };
@@ -66,7 +65,6 @@
 		DE7AB1FD28D263CE002C4FC7 /* BagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagView.swift; sourceTree = "<group>"; };
 		DE7AB20328D2A86A002C4FC7 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		DE839B2E29056256009B0340 /* BagListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagListView.swift; sourceTree = "<group>"; };
-		DE9FD9B129050D6300EC5D10 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = products.json; path = ../../../../Downloads/products.json; sourceTree = "<group>"; };
 		DEC954CC28FAB36F0046E58A /* ProductFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFetcher.swift; sourceTree = "<group>"; };
 		DECE3CA428C632120061E59D /* Discounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discounts.swift; sourceTree = "<group>"; };
 		DED5161628F38EFD00C1CB85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -129,7 +127,6 @@
 		DE034B3D28B074B4006289D2 /* YourShop */ = {
 			isa = PBXGroup;
 			children = (
-				DE9FD9B129050D6300EC5D10 /* products.json */,
 				DE034B4228B074B7006289D2 /* Assets.xcassets */,
 				DED5161628F38EFD00C1CB85 /* Info.plist */,
 				DEEB219928BBFAAE00B401B1 /* Views */,
@@ -350,7 +347,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE9FD9B229050D6300EC5D10 /* products.json in Resources */,
 				DE034B4628B074B7006289D2 /* Preview Assets.xcassets in Resources */,
 				DE034B4328B074B7006289D2 /* Assets.xcassets in Resources */,
 			);
