@@ -10,7 +10,8 @@ import SwiftUI
 struct HomeTabView: View {
   
   var body: some View {
-    TabBar().environmentObject(Bag())
+    TabBar()
+      .environmentObject(Bag())
   }
 }
 

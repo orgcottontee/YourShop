@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct yu_shop_catherineApp: App {
+  
+  let persistenceController = PersistenceController.shared
+  
   var body: some Scene {
     WindowGroup {
       SplashScreenView()
+        .environment(\.managedObjectContext, persistenceController.container.viewContext)
     }
   }
 }
