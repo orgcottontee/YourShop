@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diffs</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>// Currently Tomatoes &amp; Apples are printed synchronously.
+// 1. Modify the DispatchQueues so Tomatoes &amp; Apples are printed asynchronously. 
+
+DispatchQueue(label: "com.raywenderlich.queue1").async {
+    // Original: DispatchQueue(label: "com.raywenderlich.queue1").sync {
+</string>
+			<key>ModifiedRange</key>
+			<string>{100, 271}</string>
+			<key>OriginalContent</key>
+			<string>//Currently Tomatoes &amp; Apples are printed synchronously.
+//Modify the DispatchQueue's so Tomatoes &amp; Apples are printed Asynchronous. 
+
+
+DispatchQueue(label: "com.raywenderlich.queue1").sync {
+</string>
+			<key>OriginalRange</key>
+			<string>{100, 192}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>DispatchQueue(label: "com.raywenderlich.queue2").async {
+    // Original: DispatchQueue(label: "com.raywenderlich.queue2").async {
+</string>
+			<key>ModifiedRange</key>
+			<string>{426, 131}</string>
+			<key>OriginalContent</key>
+			<string>DispatchQueue(label: "com.raywenderlich.queue2").sync {
+</string>
+			<key>OriginalRange</key>
+			<string>{347, 56}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>    
+</string>
+			<key>ModifiedRange</key>
+			<string>{615, 5}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{461, 0}</string>
+		</dict>
+	</array>
+	<key>FormatVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
