@@ -11,11 +11,13 @@ import SwiftUI
 struct YourShopApp: App {
   
   @StateObject var bag = Bag()
+  @StateObject var networkMonitor = NetworkMonitor()
   
   var body: some Scene {
     WindowGroup {
       SplashScreenView()
         .environmentObject(bag)
+        .environmentObject(networkMonitor)
     }
   }
 }

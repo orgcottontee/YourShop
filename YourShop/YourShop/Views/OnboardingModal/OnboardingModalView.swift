@@ -15,7 +15,7 @@ struct OnboardingModalView: View {
     
     VStack {
       HStack {
-        OnboardingTitle(text: Constants.appInfo.appName)
+        OnboardingTitle(text: Constants.AppInfo.appName)
         
         Spacer()
         

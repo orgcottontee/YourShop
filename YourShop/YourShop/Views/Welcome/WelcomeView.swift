@@ -24,7 +24,7 @@ struct WelcomeView: View {
         
         Spacer()
         
-        WelcomeText(text: Constants.title.homeTitle)
+        WelcomeText(text: Constants.Title.homeTitle)
         Button(action: {
           showOnboardingModal.toggle()
         }) {

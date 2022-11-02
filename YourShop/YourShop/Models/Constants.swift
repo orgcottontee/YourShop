@@ -15,13 +15,15 @@ enum Constants {
     public static let onboardingModalView = "clear"
     public static let splashScreenView = "tshirt"
     public static let loadingAPIImageView = "photo.on.rectangle.angled"
+    public static let noConnection = "wifi.exclamationmark"
   }
   
-  enum appInfo {
+  enum AppInfo {
     public static let appName = "Yu Shop"
+    public static let networkErrorMessage = "Network connection error! Please check your connectivity in your phone settings."
   }
   
-  enum title {
+  enum Title {
     public static let homeTitle = "Welcome"
   }
   

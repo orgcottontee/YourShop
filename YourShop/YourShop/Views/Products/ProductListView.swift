@@ -10,6 +10,7 @@ import CoreData
 
 struct ProductListView: View {
   
+  @EnvironmentObject var networkMonitor: NetworkMonitor
   @ObservedObject var productFetcher = ProductFetcher()
   @State var products: [Product] = []
   var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
@@ -18,32 +19,35 @@ struct ProductListView: View {
   var body: some View {
     
     NavigationView {
-      ScrollView {
-        LazyVGrid(columns: columns, spacing: 20) {
-          ForEach(products, id: \.id) { product in
-            NavigationLink(destination: ProductDetailView(product: product)) {
-              ProductCard(product: product)
+      if networkMonitor.hasConnection {
+        ScrollView {
+          LazyVGrid(columns: columns, spacing: 20) {
+            ForEach(products, id: \.id) { product in
+              NavigationLink(destination: ProductDetailView(product: product)) {
+                ProductCard(product: product)
+              }
             }
           }
+          .padding()
         }
-        .padding()
-      }
-      .navigationTitle("Products")
-      .task {
-        do {
-          products = try await productFetcher.fetchProducts()
-        } catch ProductFetcher.APIError.requestFailed {
-          print("Your request failed")
-        } catch ProductFetcher.APIError.responseDecodingFailed {
-          print("Failed response")
-        } catch ProductFetcher.APIError.urlCreationFailed {
-          print("Invalid URL")
-        } catch ProductFetcher.APIError.noInternetConnection {
-          print("No Internet Connection")
-        } catch {
-          print(error.localizedDescription)
-        }
-          
+        .navigationTitle("Products")
+       /* .task {
+          do {
+            products = try await productFetcher.fetchProducts()
+          } catch ProductFetcher.APIError.requestFailed {
+            print("Your request failed")
+          } catch ProductFetcher.APIError.responseDecodingFailed {
+            print("Failed response")
+          } catch ProductFetcher.APIError.urlCreationFailed {
+            print("Invalid URL")
+          } catch ProductFetcher.APIError.noInternetConnection {
+            print("No Internet Connection")
+          } catch {
+            print(error.localizedDescription)
+          }
+        } */
+      } else {
+        NoNetworkView()
       }
     }
   }
