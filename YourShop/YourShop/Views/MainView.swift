@@ -21,7 +21,7 @@ struct MainView: View {
         .tabItem {
           Label("Welcome", systemImage: "house")
         }
-      BagView(products: Product.example)
+      BagView()
         .badge(bag.products.count)
         .tabItem {
           Label("Bag", systemImage: "bag")

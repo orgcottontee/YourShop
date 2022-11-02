@@ -38,6 +38,8 @@ struct ProductListView: View {
           print("Failed response")
         } catch ProductFetcher.APIError.urlCreationFailed {
           print("Invalid URL")
+        } catch ProductFetcher.APIError.noInternetConnection {
+          print("No Internet Connection")
         } catch {
           print(error.localizedDescription)
         }
