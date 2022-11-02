@@ -11,7 +11,11 @@ struct ProductDetailView: View {
   
   @EnvironmentObject var bag: Bag
   var product: Product
-   
+  var isInBag: Bool {
+    return bag.products.contains(where: { product in
+      product.id == self.product.id
+    })
+  }
   var body: some View {
     
     VStack {
@@ -33,18 +37,28 @@ struct ProductDetailView: View {
         .font(.caption)
         .padding()
       
-      HStack {
+      VStack {
         Text("$ \(String(format: "%.1f", product.price))")
           .kerning(2)
           .font(.title2)
           .multilineTextAlignment(.center)
           .padding()
-        
-        Button {
-          print("You've added \(product.title) to your bag!")
-          bag.addToBag(product: product)
-        } label: {
-          Image(systemName: "plus")
+        HStack {
+          Button {
+            if isInBag {
+              bag.removeFromBag(product: product)
+            } else {
+              bag.addToBag(product: product)
+            }
+          } label: {
+            if isInBag {
+              Image(systemName: "minus")
+              Text("Remove from bag")
+            } else {
+              Image(systemName: "plus")
+              Text("Add to bag")
+            }
+          }
         }
       }
     }

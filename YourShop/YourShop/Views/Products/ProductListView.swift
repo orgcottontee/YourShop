@@ -31,24 +31,27 @@ struct ProductListView: View {
           .padding()
         }
         .navigationTitle("Products")
-       /* .task {
-          do {
-            products = try await productFetcher.fetchProducts()
-          } catch ProductFetcher.APIError.requestFailed {
-            print("Your request failed")
-          } catch ProductFetcher.APIError.responseDecodingFailed {
-            print("Failed response")
-          } catch ProductFetcher.APIError.urlCreationFailed {
-            print("Invalid URL")
-          } catch ProductFetcher.APIError.noInternetConnection {
-            print("No Internet Connection")
-          } catch {
-            print(error.localizedDescription)
-          }
-        } */
+        .task {
+          await fetchProducts()
+        }
       } else {
         NoNetworkView()
       }
+    }
+  }
+  @MainActor func fetchProducts() async {
+    do {
+      products = try await productFetcher.fetchProducts()
+    } catch ProductFetcher.APIError.requestFailed {
+      print("Your request failed")
+    } catch ProductFetcher.APIError.responseDecodingFailed {
+      print("Failed response")
+    } catch ProductFetcher.APIError.urlCreationFailed {
+      print("Invalid URL")
+    } catch ProductFetcher.APIError.noInternetConnection {
+      print("No Internet Connection")
+    } catch {
+      print(error.localizedDescription)
     }
   }
 }

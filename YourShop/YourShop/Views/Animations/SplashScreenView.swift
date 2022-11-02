@@ -12,7 +12,6 @@ struct SplashScreenView: View {
   @State private var isActive = false
   @State private var size = 0.1
   @State private var opacity  = 0.4
-  // TODO: Animate a hanger from top and a tshirt from bottom to meet in the middle
   
   var body: some View {
     
@@ -44,9 +43,9 @@ struct SplashScreenView: View {
     }
   }
 }
-  
-  struct SplashScreenView_Previews: PreviewProvider {
-    static var previews: some View {
-      SplashScreenView()
-    }
+
+struct SplashScreenView_Previews: PreviewProvider {
+  static var previews: some View {
+    SplashScreenView()
   }
+}

@@ -28,7 +28,7 @@ class ProductFetcher: ObservableObject {
     self.session = URLSession(configuration: sessionConfiguration)
   }
   
-  @MainActor func fetchProducts() async throws -> [Product] {
+  func fetchProducts() async throws -> [Product] {
     guard let url = URL(string: "https://fakestoreapi.com/products") else {
       throw APIError.urlCreationFailed
     }
