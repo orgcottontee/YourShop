@@ -23,8 +23,8 @@ class ProductFetcher: ObservableObject {
   }
   
   @Published private(set) var hasInternetConnection = true
-  private var products = [Product]()
   
+  private var products = [Product]()
   private let session: URLSession
   private let sessionConfiguration: URLSessionConfiguration
   private let monitor = NWPathMonitor()

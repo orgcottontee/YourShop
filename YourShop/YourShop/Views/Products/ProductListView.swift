@@ -43,6 +43,7 @@ struct ProductListView: View {
         } catch {
           print(error.localizedDescription)
         }
+          
       }
     }
   }
