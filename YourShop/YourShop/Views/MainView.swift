@@ -17,10 +17,6 @@ struct MainView: View {
         .tabItem {
           Label("Browse", systemImage: "magnifyingglass")
         }
-      WelcomeView()
-        .tabItem {
-          Label("Welcome", systemImage: "house")
-        }
       BagView()
         .badge(bag.products.count)
         .tabItem {
