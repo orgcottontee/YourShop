@@ -54,9 +54,11 @@ struct ProductDetailView: View {
             if isInBag {
               Image(systemName: "minus")
               Text("Remove from bag")
+          
             } else {
               Image(systemName: "plus")
               Text("Add to bag")
+                
             }
           }
         }

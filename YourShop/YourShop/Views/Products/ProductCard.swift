@@ -20,7 +20,7 @@ struct ProductCard: View {
       } placeholder: {
         LoadingAPIImageView()
       }
-      
+
       VStack(alignment: .leading) {
         Text("$\(product.price, specifier: "%.2f")")
       }
