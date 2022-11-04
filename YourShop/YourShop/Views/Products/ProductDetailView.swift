@@ -52,15 +52,23 @@ struct ProductDetailView: View {
             }
           } label: {
             if isInBag {
-              Image(systemName: "minus")
-              Text("Remove from bag")
-          
-            } else {
-              Image(systemName: "plus")
-              Text("Add to bag")
+              Image(systemName: Constants.SfSymbols.minus)
+              Text(Constants.bagActions.removeFromBag)
+                .kerning(4)
+                .foregroundColor(Color("ButtonTextColor"))
+                .fontWeight(.bold)
                 
+            } else {
+              Image(systemName: Constants.SfSymbols.plus)
+              Text(Constants.bagActions.addToBag)
+                .kerning(4)
+                .foregroundColor(Color("ButtonTextColor"))
+                .fontWeight(.bold)
             }
           }
+          .padding(5)
+          .background(Color("ButtonColor"))
+          .cornerRadius(10)
         }
       }
     }
